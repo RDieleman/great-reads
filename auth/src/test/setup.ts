@@ -2,6 +2,7 @@ import {MongoMemoryServer} from "mongodb-memory-server";
 import mongoose from "mongoose";
 import {app} from "../app";
 import request from "supertest";
+import {jest} from "@jest/globals";
 
 interface SignupDetails {
     userId: string,
@@ -13,6 +14,8 @@ interface SignupDetails {
 declare global {
     var signup: () => Promise<SignupDetails>;
 }
+
+jest.mock("../nats-wrapper");
 
 let mongo: any;
 
@@ -28,6 +31,8 @@ beforeAll(async () => {
 
 // Reset database.
 beforeEach(async () => {
+    jest.clearAllMocks();
+
     const collections = await mongoose.connection.db.collections();
 
     for (let collection of collections) {

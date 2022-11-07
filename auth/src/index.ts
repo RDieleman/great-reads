@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import {app} from "./app";
 import {TokensRevokedListener} from "./events/listeners/tokens-revoked-listener";
-import {natsWrapper} from "@greatreads/common";
+import {natsWrapper} from "./nats-wrapper";
 
 const start = async () => {
     // Verify environment variables
