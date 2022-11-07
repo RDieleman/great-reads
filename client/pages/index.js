@@ -18,7 +18,7 @@ const LandingPage = (context) => {
         <h1>Home</h1>
         <hr/>
         <div>
-            Logged in as <b>{context.currentUser.userInfo.email}</b>.
+            Logged in as <b>{context.currentUser.userInfo.email}</b>!
         </div>
     </div>
 }
