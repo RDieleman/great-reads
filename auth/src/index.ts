@@ -29,6 +29,8 @@ const start = async () => {
         console.log(err);
     }
 
+    console.log('test test test');
+
     // Connect to NATS
     try {
         await natsWrapper.connect(
