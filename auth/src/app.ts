@@ -7,9 +7,10 @@ import {currentUserRouter} from './routes/current-user';
 import {signinRouter} from './routes/signin';
 import {signupRouter} from './routes/signup';
 import {signoutRouter} from './routes/signout';
-import {errorHandler, NotFoundError} from "@greatreads/common";
 import {deleteRouter} from "./routes/delete";
 import {privacyRouter} from "./routes/privacy";
+import {NotFoundError} from "./errors/not-found-error";
+import {errorHandler} from "./middlewares/error-handler";
 
 const app = express();
 

@@ -1,8 +1,9 @@
 import express from 'express';
-import {currentUser, requireAuth} from "@greatreads/common/";
 import {natsWrapper} from "../nats-wrapper";
 import {User} from "../models/user";
 import {AccountDeletedPublisher} from "../events/account_deleted/account-deleted-publisher";
+import {currentUser} from "../middlewares/current-user";
+import {requireAuth} from "../middlewares/require-auth";
 
 const router = express.Router();
 

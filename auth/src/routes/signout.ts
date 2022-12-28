@@ -1,7 +1,8 @@
 import express from 'express';
 import {TokenRevokedPublisher} from "../events/token_revoked/token-revoked-publisher";
-import {BadRequestError, currentUser} from "@greatreads/common/";
 import {natsWrapper} from "../nats-wrapper";
+import {currentUser} from "../middlewares/current-user";
+import {BadRequestError} from "../errors/bad-request-error";
 
 const router = express.Router();
 
