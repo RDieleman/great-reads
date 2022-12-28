@@ -1,7 +1,7 @@
 import request from 'supertest';
 import {app} from "../../app";
 import {natsWrapper} from "../../nats-wrapper";
-import {Subjects} from "@greatreads/common/";
+import {Subjects} from "../../events/subjects";
 
 it('removes auth cookie after sign out', async () => {
     const signUpDetails = await signup();
@@ -27,7 +27,7 @@ it('publishes an event on sign out', async () => {
         .expect(200);
 
     expect(natsWrapper.client.publish).toHaveBeenCalledWith(
-        Subjects.TOKENS_REVOKED,
+        Subjects.TOKEN_REVOKED,
         expect.anything(),
         expect.anything()
     );
