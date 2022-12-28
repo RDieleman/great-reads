@@ -8,6 +8,7 @@ import {signinRouter} from './routes/signin';
 import {signupRouter} from './routes/signup';
 import {signoutRouter} from './routes/signout';
 import {errorHandler, NotFoundError} from "@greatreads/common";
+import {deleteRouter} from "./routes/delete";
 
 const app = express();
 
@@ -26,6 +27,7 @@ app.use(currentUserRouter);
 app.use(signinRouter);
 app.use(signupRouter);
 app.use(signoutRouter);
+app.use(deleteRouter);
 
 app.all('*', async () => {
     throw new NotFoundError();
