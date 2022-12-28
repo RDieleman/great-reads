@@ -10,7 +10,7 @@ import {SessionManager} from "../services/session-manager";
 const router = express.Router();
 
 router.post(
-    '/api/users/signin',
+    '/api/users/signin/credentials',
     [
         body('email')
             .isEmail()

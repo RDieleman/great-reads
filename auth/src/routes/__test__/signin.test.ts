@@ -3,7 +3,7 @@ import {app} from "../../app";
 
 it('fails when an email is provided that does not exist', async () => {
     await request(app)
-        .post('/api/users/signin')
+        .post('/api/users/signin/credentials')
         .send({
             email: 'test@test.com',
             password: 'password'
@@ -24,7 +24,7 @@ it('fails with generic message when an incorrect password is supplied', async ()
 
     for (let password in passwords) {
         await request(app)
-            .post('/api/users/signin')
+            .post('/api/users/signin/credentials')
             .send({
                 email: signUpDetails.email,
                 password
