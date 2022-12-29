@@ -38,3 +38,28 @@ it('fails with generic message when an incorrect password is supplied', async ()
             });
     }
 });
+
+it('fails with generic message when an invalid google token is supplied', async () => {
+    const tokens = [
+        "token123",
+        "",
+        null,
+        "12312312313dfjdkfkwkejrqw;lerjqwerlkasdf;lkjasdf"
+    ]
+
+    for (let token in tokens) {
+        await request(app)
+            .post('/api/users/signin/google')
+            .type('form')
+            .send({
+                credential: token
+            })
+            .expect(400, {
+                "errors": [
+                    {
+                        "message": "Invalid credentials."
+                    }
+                ]
+            });
+    }
+});
