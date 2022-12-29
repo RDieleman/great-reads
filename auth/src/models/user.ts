@@ -3,7 +3,7 @@ import {PasswordManager} from "../services/password-manager";
 
 interface UserAttrs {
     email: string;
-    password: string;
+    password: string | null;
 }
 
 interface UserModel extends mongoose.Model<UserDoc> {
@@ -22,7 +22,7 @@ const userSchema = new mongoose.Schema({
     },
     password: {
         type: String,
-        required: true
+        required: false
     }
 }, {
     toJSON: {
@@ -37,7 +37,7 @@ const userSchema = new mongoose.Schema({
 
 // Hash password.
 userSchema.pre('save', async function (done) {
-    if (this.isModified('password')) {
+    if (this.isModified('password') && this.get('password') != null) {
         const hashed = await PasswordManager.toHash(this.get('password'));
         this.set('password', hashed);
     }

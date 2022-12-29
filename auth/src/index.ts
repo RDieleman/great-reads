@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import {app} from "./app";
-import {TokensRevokedListener} from "./events/listeners/tokens-revoked-listener";
+import {TokenRevokedListener} from "./events/token_revoked/token-revoked-listener";
 import {natsWrapper} from "./nats-wrapper";
 
 const start = async () => {
@@ -19,6 +19,12 @@ const start = async () => {
     }
     if (!process.env.NATS_CLUSTER_ID) {
         throw new Error('NATS_URL must be defined')
+    }
+    if (!process.env.GOOGLE_CLIENT_ID) {
+        throw new Error('GOOGLE_CLIENT_ID must be defined')
+    }
+    if (!process.env.GOOGLE_CLIENT_SECRET) {
+        throw new Error('GOOGLE_CLIENT_SECRET must be defined')
     }
 
     // Connect to database.
@@ -46,7 +52,7 @@ const start = async () => {
         process.on('SIGTERM', () => natsWrapper.client.close());
 
         // Start listeners
-        new TokensRevokedListener(natsWrapper.client).listen();
+        new TokenRevokedListener(natsWrapper.client).listen();
     } catch (err) {
         console.log(err);
     }
@@ -57,4 +63,4 @@ const start = async () => {
     });
 };
 
-start().then(r => console.log("App started."));
+start().then(() => console.log("App started."));
