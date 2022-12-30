@@ -13,7 +13,7 @@ export const options = {
 };
 
 export default function () {
-    const url = 'http://www.greatreads.online/';
+    const url = 'https://www.greatreads.online/';
 
     const res = http.get(url, {tags: {name: 'Home'}});
     check(res, {
