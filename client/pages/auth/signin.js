@@ -42,7 +42,7 @@ export default () => {
 
     function loadButton() {
         google.accounts.id.initialize({
-            client_id: "638484248515-l7015v4n2d37u7titifn64vrolv7bvqu.apps.googleusercontent.com",
+            client_id: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
             callback: handleTokenResponse
         });
         google.accounts.id.renderButton(
@@ -68,7 +68,7 @@ export default () => {
             defer
         />
         <form onSubmit={onSubmit} className="container">
-            <h1>Sign In</h1>
+            <h1>Sign In2</h1>
             <div className="mb-3">
                 <label htmlFor="emailInput" className="form-label">Email address</label>
                 <input type="email" className="form-control" id="emailInput" value={email}
