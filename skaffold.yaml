@@ -10,6 +10,8 @@ build:
             dest: .
       docker:
         dockerfile: Dockerfile
+        buildArgs:
+          target: dev
     - image: rdieleman/client
       context: client
       sync:

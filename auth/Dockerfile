@@ -1,8 +1,14 @@
 FROM node:alpine
 
+ARG target=production
+
+ENV target=$target
+ENV NODE_ENV=$target
+
 WORKDIR /app
 COPY package.json .
-RUN npm install --omit=dev
+RUN npm install
 COPY . .
 
-CMD ["npm", "start"]
+RUN ["chmod","+x", "/app/scripts/run.sh"]
+CMD /app/scripts/run.sh
