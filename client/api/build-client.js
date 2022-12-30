@@ -5,8 +5,7 @@ export default ({req}) => {
 
     if (onServer) {
         return axios.create({
-            //dev baseURL: 'http://ingress-nginx-controller.ingress-nginx.svc.cluster.local',
-            baseURL: 'https://www.greatreads.online',
+            baseURL: process.env.NEXT_PUBLIC_HOST,
             headers: req.headers,
         });
     } else {

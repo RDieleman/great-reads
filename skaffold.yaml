@@ -18,6 +18,8 @@ build:
             dest: .
       docker:
         dockerfile: Dockerfile
+        buildArgs:
+          target: dev
   local:
     push: false
 manifests:
