@@ -1,13 +1,13 @@
-name: test-auth
+name: test-book-info
 
 on:
   pull_request:
     paths:
-      - 'auth/**'
+      - 'book-info/**'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: cd auth && npm install && npm run test:ci
+      - run: cd book-info && npm install && npm run test:ci

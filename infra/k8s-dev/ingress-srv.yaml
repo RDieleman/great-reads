@@ -16,6 +16,13 @@ spec:
                 name: auth-srv
                 port:
                   number: 3000
+          - path: /api/book-info/?(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: book-info-srv
+                port:
+                  number: 3000
           - path: /?(.*)
             pathType: Prefix
             backend:
