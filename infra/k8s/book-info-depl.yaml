@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: book-info-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: book-info
+  template:
+    metadata:
+      labels:
+        app: book-info
+    spec:
+      containers:
+        - name: book-info
+          image: rdieleman/book-info
+          env:
+            - name: NATS_CLIENT_ID
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: NATS_URL
+              value: 'http://nats-srv:4222'
+            - name: NATS_CLUSTER_ID
+              value: greatreads
+            - name: JWT_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: jwt-secret
+                  key: JWT_KEY
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: book-info-srv
+spec:
+  selector:
+    app: book-info
+  ports:
+    - name: book-info
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
