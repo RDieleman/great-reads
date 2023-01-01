@@ -3,15 +3,11 @@ import 'express-async-errors';
 import {json} from 'body-parser';
 import cookieSession from "cookie-session";
 
-import {currentUserRouter} from './routes/current-user';
-import {signinRouter} from './routes/signin';
-import {signupRouter} from './routes/signup';
-import {signoutRouter} from './routes/signout';
-import {deleteRouter} from "./routes/delete";
-import {privacyRouter} from "./routes/privacy";
+import rateLimit from "express-rate-limit";
 import {NotFoundError} from "./errors/not-found-error";
 import {errorHandler} from "./middlewares/error-handler";
-import rateLimit from "express-rate-limit";
+import {privacyRouter} from "./routes/privacy";
+import {searchRouter} from "./routes/search";
 
 const app = express();
 
@@ -27,8 +23,9 @@ const limiter = rateLimit({
 app.use(limiter);
 
 app.use(json());
+app.set('query parser', 'simple');
 app.use(cookieSession({
-    signed: true,
+    signed: false,
     secure: true,
     httpOnly: true,
     sameSite: true,
@@ -37,12 +34,8 @@ app.use(cookieSession({
     ]
 }));
 
-app.use(currentUserRouter);
-app.use(signinRouter);
-app.use(signupRouter);
-app.use(signoutRouter);
-app.use(deleteRouter);
 app.use(privacyRouter);
+app.use(searchRouter);
 
 app.all('*', async () => {
     throw new NotFoundError();

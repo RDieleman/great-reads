@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: auth-depl
+  name: book-info-depl
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: auth
+      app: book-info
   template:
     metadata:
       labels:
-        app: auth
+        app: book-info
     spec:
       containers:
-        - name: auth
-          image: rdieleman/auth
+        - name: book-info
+          image: rdieleman/book-info
           env:
             - name: NATS_CLIENT_ID
               valueFrom:
@@ -24,11 +24,6 @@ spec:
               value: 'http://nats-srv:4222'
             - name: NATS_CLUSTER_ID
               value: greatreads
-            - name: MONGO_URI
-              valueFrom:
-                secretKeyRef:
-                  name: db-secret
-                  key: DB_URI
             - name: JWT_KEY
               valueFrom:
                 secretKeyRef:
@@ -39,23 +34,16 @@ spec:
                 secretKeyRef:
                   name: cookie-secret
                   key: KEY
-            - name: GOOGLE_CLIENT_ID
-              value: '638484248515-l7015v4n2d37u7titifn64vrolv7bvqu.apps.googleusercontent.com'
-            - name: GOOGLE_CLIENT_SECRET
-              valueFrom:
-                secretKeyRef:
-                  name: google-secret
-                  key: CLIENT_SECRET
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: auth-srv
+  name: book-info-srv
 spec:
   selector:
-    app: auth
+    app: book-info
   ports:
-    - name: auth
+    - name: book-info
       protocol: TCP
       port: 3000
       targetPort: 3000
