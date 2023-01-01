@@ -7,6 +7,7 @@ import rateLimit from "express-rate-limit";
 import {NotFoundError} from "./errors/not-found-error";
 import {errorHandler} from "./middlewares/error-handler";
 import {privacyRouter} from "./routes/privacy";
+import {searchRouter} from "./routes/search";
 
 const app = express();
 
@@ -22,6 +23,7 @@ const limiter = rateLimit({
 app.use(limiter);
 
 app.use(json());
+app.set('query parser', 'simple');
 app.use(cookieSession({
     signed: false,
     secure: false,
@@ -30,6 +32,7 @@ app.use(cookieSession({
 }));
 
 app.use(privacyRouter);
+app.use(searchRouter);
 
 app.all('*', async () => {
     throw new NotFoundError();

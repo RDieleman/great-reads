@@ -1,0 +1,2331 @@
+{
+  "kind": "books#volumes",
+  "totalItems": 521,
+  "items": [
+    {
+      "kind": "books#volume",
+      "id": "_cI_AQAAQBAJ",
+      "etag": "F+rI9kWolBA",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/_cI_AQAAQBAJ",
+      "volumeInfo": {
+        "title": "De test",
+        "authors": [
+          "Joelle Charbonneau"
+        ],
+        "publisher": "Karakter",
+        "publishedDate": "2013-10-08",
+        "description": "De Test is het eerste deel van een nieuwe serie waarop de fans van De Hongerspelen en Inwijding al maanden wachten! `De Test kruipt onder je huid en laat je niet meer los. De spanning, angst en woede van Cia zijn levensecht. Toen het boek uit was, kon ik nog maar aan één ding denken: meer! Marieke (26 jaar) De jonge, ambitieuze Cia Vale is tot haar vreugde een van de uitverkorenen om deel te nemen aan De Test: een jaarlijks terugkerend evenement waarvoor alleen de allerbeste studenten uit de koloniën van het Verenigd Gemenebest geselecteerd worden. Zij die slagen voor De Test hebben de wereld aan hun voeten liggen en zullen klaargestoomd worden tot toekomstige leiders van hun land. Vol goede moed, maar met waarschuwingen van haar vader in haar achterhoofd, vertrekt Cia naar de hoofdstad, waar De Test zal plaatsvinden. Als blijkt dat de inhoud van de diverse beproevingen niet alleen geestelijk, maar ook fysiek het uiterste van de kandidaten vraagt, ontstaat er een onderlinge strijd tussen de deelnemers. Cia komt al snel tot de ontdekking dat ze op zichzelf aangewezen is, maar door haar intuïtie te volgen en intelligentie en durf te tonen komt ze steeds een testronde verder, terwijl haar medekandidaten stuk voor stuk het toneel moeten verlaten, levend of dood... Heeft Cia het in zich om ook de allerlaatste horde te nemen? Kan ze overleven in het speelveld van de vierde ronde: het verwoeste en vervuilde land dat ooit Amerika was en lukt het haar om op tijd de hoofdstad te bereiken? En kan ze de mensen die het dichtst bij haar staan wel écht vertrouwen, of is niets wat het lijkt?",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9789045205847"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "904520584X"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "printType": "BOOK",
+        "categories": [
+          "Fiction"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.2.2.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=_cI_AQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=_cI_AQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "nl",
+        "previewLink": "http://books.google.nl/books?id=_cI_AQAAQBAJ&printsec=frontcover&dq=test&hl=&as_pt=BOOKS&cd=1&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=_cI_AQAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=_cI_AQAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 7.99,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 5.43,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=_cI_AQAAQBAJ&rdid=book-_cI_AQAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 7990000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 5430000,
+              "currencyCode": "EUR"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.nl/books/download/De_test-sample-epub.acsm?id=_cI_AQAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.nl/books/download/De_test-sample-pdf.acsm?id=_cI_AQAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=_cI_AQAAQBAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "De Test is het eerste deel van een nieuwe serie waarop de fans van De Hongerspelen en Inwijding al maanden wachten! `De Test kruipt onder je huid en laat je niet meer los."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "B0L9DwAAQBAJ",
+      "etag": "J2eMNpwh94s",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/B0L9DwAAQBAJ",
+      "volumeInfo": {
+        "title": "Test Your IQ",
+        "authors": [
+          "Dover Publications"
+        ],
+        "publisher": "Courier Dover Publications",
+        "publishedDate": "2020-10-14",
+        "description": "Do you consider yourself good at math? Logical thinking? Spatial perception? This fascinating resource can help the curious test their intelligence quotient in a fun and simple way. Covering a wide range of skills, 11 IQ tests feature 60 questions each, from \"What number should be inserted?\" to \"What is the meaning of the word utterly?\" Complete answers are included.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780486843315"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0486843319"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 210,
+        "printType": "BOOK",
+        "categories": [
+          "Games & Activities"
+        ],
+        "averageRating": 4,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.0.1.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=B0L9DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=B0L9DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=B0L9DwAAQBAJ&printsec=frontcover&dq=test&hl=&as_pt=BOOKS&cd=2&source=gbs_api",
+        "infoLink": "http://books.google.nl/books?id=B0L9DwAAQBAJ&dq=test&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Test_Your_IQ.html?hl=&id=B0L9DwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.nl/books/download/Test_Your_IQ-sample-pdf.acsm?id=B0L9DwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=B0L9DwAAQBAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Do you consider yourself good at math?"
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "NXfXxOFFOVwC",
+      "etag": "EzN8IcrZSp4",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/NXfXxOFFOVwC",
+      "volumeInfo": {
+        "title": "Senior Fitness Test Manual",
+        "authors": [
+          "Roberta E. Rikli",
+          "C. Jessie Jones"
+        ],
+        "publisher": "Human Kinetics",
+        "publishedDate": "2013",
+        "description": "This work details a test that is suitable for measuring the fitness levels of older adults. It includes performance standards and tables for evaluating individuals according to their age and gender.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781450411189"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1450411185"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 202,
+        "printType": "BOOK",
+        "categories": [
+          "Medical"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=NXfXxOFFOVwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=NXfXxOFFOVwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=NXfXxOFFOVwC&printsec=frontcover&dq=test&hl=&as_pt=BOOKS&cd=3&source=gbs_api",
+        "infoLink": "http://books.google.nl/books?id=NXfXxOFFOVwC&dq=test&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Senior_Fitness_Test_Manual.html?hl=&id=NXfXxOFFOVwC"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.nl/books/download/Senior_Fitness_Test_Manual-sample-pdf.acsm?id=NXfXxOFFOVwC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=NXfXxOFFOVwC&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "This work details a test that is suitable for measuring the fitness levels of older adults. It includes performance standards and tables for evaluating individuals according to their age and gender."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "j6vY_KQTCGEC",
+      "etag": "tWUBq+rSjpY",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/j6vY_KQTCGEC",
+      "volumeInfo": {
+        "title": "How to Master Psychometric Tests",
+        "subtitle": "Expert Advice on Test Preparation with Practice Questions from Leading Test Providers",
+        "authors": [
+          "Mark Parkinson"
+        ],
+        "publisher": "Kogan Page Publishers",
+        "publishedDate": "2008",
+        "description": "This book provides a detailed overview of what happens during a psychometric test session, and gives a set of practical tools and strategies which will boost your chances of achieving test and career success.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780749451653"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0749451653"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 224,
+        "printType": "BOOK",
+        "categories": [
+          "Business & Economics"
+        ],
+        "averageRating": 4,
+        "ratingsCount": 2,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.1.0.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=j6vY_KQTCGEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=j6vY_KQTCGEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=j6vY_KQTCGEC&printsec=frontcover&dq=test&hl=&as_pt=BOOKS&cd=4&source=gbs_api",
+        "infoLink": "http://books.google.nl/books?id=j6vY_KQTCGEC&dq=test&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/How_to_Master_Psychometric_Tests.html?hl=&id=j6vY_KQTCGEC"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.nl/books/download/How_to_Master_Psychometric_Tests-sample-pdf.acsm?id=j6vY_KQTCGEC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=j6vY_KQTCGEC&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "This book provides a detailed overview of what happens during a psychometric test session, and gives a set of practical tools and strategies which will boost your chances of achieving test and career success."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "9HRodACJLOoC",
+      "etag": "IvvYVvAds3w",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/9HRodACJLOoC",
+      "volumeInfo": {
+        "title": "Boundary-Scan Test",
+        "subtitle": "A Practical Approach",
+        "authors": [
+          "Harry Bleeker",
+          "Peter van den Eijnden",
+          "Frans de Jong"
+        ],
+        "publisher": "Springer Science & Business Media",
+        "publishedDate": "1992-12-31",
+        "description": "The ever-increasing miniaturization of digital electronic components is hampering the conventional testing of Printed Circuit Boards (PCBs) by means of bed-of-nails fixtures. Basically this is caused by the very high scale of integration of ICs, through which packages with hundreds of pins at very small pitches of down to a fraction of a millimetre, have become available. As a consequence the trace distances between the copper tracks on a printed circuit board cmne down to the same value. Not only the required small physical dimensions of the test nails have made conventional testing unfeasible, but also the complexity to provide test signals for the many hundreds of test nails has grown out of limits. Therefore a new board test methodology had to be invented. Following the evolution in the IC test technology. Boundary-Scan testing hm; become the new approach to PCB testing. By taking precautions in the design of the IC (design for testability), testing on PCB level can be simplified 10 a great extent. This condition has been essential for the success of the introduction of Boundary-Sc,m Test (BST) at board level.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0792392965"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780792392965"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 246,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.4.9.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=9HRodACJLOoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=9HRodACJLOoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=9HRodACJLOoC&printsec=frontcover&dq=test&hl=&as_pt=BOOKS&cd=5&source=gbs_api",
+        "infoLink": "http://books.google.nl/books?id=9HRodACJLOoC&dq=test&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Boundary_Scan_Test.html?hl=&id=9HRodACJLOoC"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.nl/books/download/Boundary_Scan_Test-sample-epub.acsm?id=9HRodACJLOoC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.nl/books/download/Boundary_Scan_Test-sample-pdf.acsm?id=9HRodACJLOoC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=9HRodACJLOoC&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Basically this is caused by the very high scale of integration of ICs, through which packages with hundreds of pins at very small pitches of down to a fraction of a millimetre, have become available."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "6ditCAAAQBAJ",
+      "etag": "zX6nck+ipxE",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/6ditCAAAQBAJ",
+      "volumeInfo": {
+        "title": "Performance Testing with JMeter - Second Edition",
+        "authors": [
+          "Bayo Erinle"
+        ],
+        "publisher": "Packt Publishing Ltd",
+        "publishedDate": "2015-04-24",
+        "description": "This book is great for developers, quality assurance engineers, testers, and test managers new to Apache JMeter, or those who are looking to get a good grounding in how to effectively use and become proficient with JMeter. No prior testing experience is required.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781784395346"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "178439534X"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 164,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.1.2.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=6ditCAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=6ditCAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=6ditCAAAQBAJ&printsec=frontcover&dq=test&hl=&as_pt=BOOKS&cd=6&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=6ditCAAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=6ditCAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 27.24,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 19.07,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=6ditCAAAQBAJ&rdid=book-6ditCAAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 27240000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 19070000,
+              "currencyCode": "EUR"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=6ditCAAAQBAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "This book is great for developers, quality assurance engineers, testers, and test managers new to Apache JMeter, or those who are looking to get a good grounding in how to effectively use and become proficient with JMeter."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "upvswAEACAAJ",
+      "etag": "wRHdDeBLcFc",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/upvswAEACAAJ",
+      "volumeInfo": {
+        "title": "The Numeracy Test Workbook",
+        "subtitle": "Everything You Need for a Successful Programme of Self Study Including Quick Tests and Full-Length Realistic Mock-Ups",
+        "authors": [
+          "Mike Bryon"
+        ],
+        "publisher": "Kogan Page",
+        "publishedDate": "2011",
+        "description": "As a companion to How to Pass Numeracy Tests, this workbook contains realistic timed mock tests, explained answers, score interpretations, and practice material directly relevant to the selection tests used by many schools and organizations to test accounting and business comprehension, quantitative operations, and numerical reasoning. The 700 practice questions are primarily word problems, number sequences, and graphs that require only basic algebra.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0749462078"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780749462079"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 227,
+        "printType": "BOOK",
+        "categories": [
+          "Study Aids"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=upvswAEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=upvswAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=upvswAEACAAJ&dq=test&hl=&as_pt=BOOKS&cd=7&source=gbs_api",
+        "infoLink": "http://books.google.nl/books?id=upvswAEACAAJ&dq=test&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_Numeracy_Test_Workbook.html?hl=&id=upvswAEACAAJ"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=upvswAEACAAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "As a companion to How to Pass Numeracy Tests, this workbook contains realistic timed mock tests, explained answers, score interpretations, and practice material directly relevant to the selection tests used by many schools and organizations ..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "Q-hTDwAAQBAJ",
+      "etag": "3+acfvD5R54",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/Q-hTDwAAQBAJ",
+      "volumeInfo": {
+        "title": "Testing Computer Software",
+        "authors": [
+          "Cem Kaner",
+          "Jack Falk",
+          "Hung Q. Nguyen"
+        ],
+        "publisher": "John Wiley & Sons",
+        "publishedDate": "1999-04-26",
+        "description": "This book will teach you how to test computer software under real-world conditions. The authors have all been test managers and software development managers at well-known Silicon Valley software companies. Successful consumer software companies have learned how to produce high-quality products under tight time and budget constraints. The book explains the testing side of that success. Who this book is for: * Testers and Test Managers * Project Managers-Understand the timeline, depth of investigation, and quality of communication to hold testers accountable for. * Programmers-Gain insight into the sources of errors in your code, understand what tests your work will have to pass, and why testers do the things they do. * Students-Train for an entry-level position in software development. What you will learn: * How to find important bugs quickly * How to describe software errors clearly * How to create a testing plan with a minimum of paperwork * How to design and use a bug-tracking system * Where testing fits in the product development process * How to test products that will be translated into other languages * How to test for compatibility with devices, such as printers * What laws apply to software quality",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780471358466"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0471358460"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 502,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.3.2.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=Q-hTDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=Q-hTDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=Q-hTDwAAQBAJ&printsec=frontcover&dq=test&hl=&as_pt=BOOKS&cd=8&source=gbs_api",
+        "infoLink": "http://books.google.nl/books?id=Q-hTDwAAQBAJ&dq=test&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Testing_Computer_Software.html?hl=&id=Q-hTDwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.nl/books/download/Testing_Computer_Software-sample-pdf.acsm?id=Q-hTDwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=Q-hTDwAAQBAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "This book will teach you how to test computer software under real-world conditions."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "WU22wAEACAAJ",
+      "etag": "D90zKCDd5ow",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/WU22wAEACAAJ",
+      "volumeInfo": {
+        "title": "Thematic Apperception Test",
+        "authors": [
+          "Henry A. Murray"
+        ],
+        "publishedDate": "1974-07",
+        "description": "This test is sold on the understanding that the plates are not to be publicly displayed and may be purchased only by authorized persons.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0674877209"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780674877207"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 40,
+        "printType": "BOOK",
+        "categories": [
+          "Psychology"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=WU22wAEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=WU22wAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=WU22wAEACAAJ&dq=test&hl=&as_pt=BOOKS&cd=9&source=gbs_api",
+        "infoLink": "http://books.google.nl/books?id=WU22wAEACAAJ&dq=test&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Thematic_Apperception_Test.html?hl=&id=WU22wAEACAAJ"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=WU22wAEACAAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "This test is sold on the understanding that the plates are not to be publicly displayed and may be purchased only by authorized persons."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "QUkSynolYUQC",
+      "etag": "aMOOXrYe92s",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/QUkSynolYUQC",
+      "volumeInfo": {
+        "title": "TOEFL Testbuster",
+        "subtitle": "REA's Testbuster for the Test of English As a Foreign Language with TESTware",
+        "authors": [
+          "Richard X. Bailey"
+        ],
+        "publisher": "Research & Education Assoc.",
+        "publishedDate": "2001-06",
+        "description": "Includes the complete TOEFL CBT Testbuster plus CD-ROM with CBT software (computer based tests.) In a computer adaptive test, the computer automatically \"adapts\" the test to the test- taker's performance. Questions get harder or easier depending on how the preceding question is answered. Scoring is based on how many of the more difficult questions are answered correctly. REA's CBT software thoroughly prepares students for this computer adaptive test. Outsmart the TOEFL CBT and raise your score with the proven testbuster strategies and techniques of the leading national coach and review courses. You get the best of the best coaching wisdom and test-taking strategies that have proven to raise test scores. Reviews are specifically tailored to the subject matter covered on the test so you don't waste time studying irrelevant material. Test questions are broken down and analyzed, with specific techniques to help you answer more questions in less time. Strategies and tips are presented that enable you to answer questions quicker and easier on all sections of the TOEFL: Listening Comprehension, Reading Comprehension, Structure and Written Expression. The testbuster teaches you to attack any question that may appear on the TOEFL CBT by capitalizing on the structure and very basis of the TOEFL CBT content. Specific strategies are taught to help you score higher on all areas of the TOEFL CBT. Four full-length diagnostic tests are included to help you determine your strengths and weaknesses. Also includes REA's Verbal Builder software to build vocabulary and reading skills. The CD-ROM works on Windows and Macintosh computers. Suitable for any PC with 16 MB of RAM minimum. Any Macintosh with a 68020 or higher processor, 16 MB of RAM minimum, System 7.1 or later.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0878911375"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780878911370"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 380,
+        "printType": "BOOK",
+        "categories": [
+          "English language"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.8.7.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=QUkSynolYUQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=QUkSynolYUQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=QUkSynolYUQC&printsec=frontcover&dq=test&hl=&as_pt=BOOKS&cd=10&source=gbs_api",
+        "infoLink": "http://books.google.nl/books?id=QUkSynolYUQC&dq=test&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/TOEFL_Testbuster.html?hl=&id=QUkSynolYUQC"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.nl/books/download/TOEFL_Testbuster-sample-pdf.acsm?id=QUkSynolYUQC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=QUkSynolYUQC&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Four full-length diagnostic tests are included to help you determine your strengths and weaknesses. Also includes REA&#39;s Verbal Builder software to build vocabulary and reading skills. The CD-ROM works on Windows and Macintosh computers."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "cj1RDwAAQBAJ",
+      "etag": "KXcblzwJkmU",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/cj1RDwAAQBAJ",
+      "volumeInfo": {
+        "title": "Rails 5 Test Prescriptions",
+        "subtitle": "Build a Healthy Codebase",
+        "authors": [
+          "Noel Rappin"
+        ],
+        "publisher": "Pragmatic Bookshelf",
+        "publishedDate": "2018-02-16",
+        "description": "Does your Rails code suffer from bloat, brittleness, or inaccuracy? Cure these problems with the regular application of test-driven development. You'll use Rails 5.1, Minitest 5, and RSpec 3.6, as well as popular testing libraries such as factory_girl and Cucumber. Updates include Rails 5.1 system tests and Webpack integration. Do what the doctor ordered to make your applications feel all better. Side effects may include better code, fewer bugs, and happier developers. Your Ruby on Rails application is sick. Deadlines are looming, but every time you make the slightest change to the code, something else breaks. Nobody remembers what that tricky piece of code was supposed to do, and nobody can tell what it actually does. Plus, it has bugs. You need test-driven development: a process for improving the design, maintainability, and long-term viability of software. With both practical code examples and discussion of why testing works, this book starts with the most basic features delivered as part of core Ruby on Rails. Once you've integrated those features into your coding practice, work with popular third-party testing tools such as RSpec, Jasmine, Cucumber, and factory_girl. Test the component parts of a Rails application, including the back-end model logic and the front-end display logic. With Rails examples, use testing to enable your code to respond better to future change. Plus, see how to handle real-world testing situations. This new edition has been updated to Rails 5.1 and RSpec 3.6 and contains full coverage of new Rails features, including system tests and the Webpack-based JavaScript setup. What You Need: Ruby 2.4, Rails 5.1",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781680505573"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1680505572"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 572,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.1.2.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=cj1RDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=cj1RDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=cj1RDwAAQBAJ&printsec=frontcover&dq=test&hl=&as_pt=BOOKS&cd=11&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=cj1RDwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=cj1RDwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 33.78,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 33.78,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=cj1RDwAAQBAJ&rdid=book-cj1RDwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 33780000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 33780000,
+              "currencyCode": "EUR"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=cj1RDwAAQBAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "With both practical code examples and discussion of why testing works, this book starts with the most basic features delivered as part of core Ruby on Rails."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "pcAD5Xzi7ukC",
+      "etag": "LLfn+0Z1b0I",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/pcAD5Xzi7ukC",
+      "volumeInfo": {
+        "title": "Functional Testing in Human Performance",
+        "authors": [
+          "Michael P. Reiman",
+          "Robert C. Manske"
+        ],
+        "publisher": "Human Kinetics",
+        "publishedDate": "2009",
+        "description": "Functional Testing in Human Performance offers clinicians the first-ever compilation of information on clinical and data-based functional testing for sport, exercise, and occupational settings. This unique text serves as a primary resource for accurate assessment of individuals' functional abilities in order to develop program prescriptions to enhance their performance. Functional Testing in Human Performance is a comprehensive learning tool for novices and an essential reference for advanced clinicians. The text defines the role of function in physical performance and how it can be appropriately tested. Especially helpful for novices, the text explains testing criteria, testing terms relevant to research, and selecting the most appropriate test and testing sequence. Common testing mistakes are also presented as well as pitfalls to avoid when testing. The text also includes case studies that illustrate a variety of situations--including testing for a client recovering from a lower-extremity injury, discussing preseason testing for a large group of athletes, and presenting the study of a client in an occupational setting. These cases include detailed statistical analysis and normative data, offering clinicians the opportunity to consider the application of functional testing and implementation strategies adaptable to their specific practice setting. After laying a foundation, the text progresses to detailed testing procedures for discrete physical parameters and specific regions of the body. Tests are organized from least to most complex, and each test is presented in a step-by-step manner outlining the purpose of the test, equipment needed, testing procedure and recommendations for performing the test, interpretation of results, and the data to suggest normative values, reliability, and validity for each test. This formatting facilitates quick reference to testing information for on-the-spot use, whether in the clinic, athletic training room, gym, or job site. Throughout the text, the functional tests are accompanied by photos for visual clarity. To enhance understanding, a companion DVD features live-action demonstrations of 40 of the most advanced tests. Icons on those test pages indicate they are modeled on the DVD. In addition, the DVD may be loaded onto a computer to offer convenient print-on-demand access to reproducible forms for recording data from selected tests. Functional Testing in Human Performance offers a unique and comprehensive reference for assessment of physical activities in sport, recreation, work, and daily living. By presenting the theory and detailing the practice, this text assists clinicians in understanding and incorporating functional testing to identify their patients' or clients' limitations and enhance their performance, rehabilitation, and daily functioning.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9780736068796"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "0736068791"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 330,
+        "printType": "BOOK",
+        "categories": [
+          "Medical"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.1.1.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=pcAD5Xzi7ukC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=pcAD5Xzi7ukC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=pcAD5Xzi7ukC&printsec=frontcover&dq=test&hl=&as_pt=BOOKS&cd=12&source=gbs_api",
+        "infoLink": "http://books.google.nl/books?id=pcAD5Xzi7ukC&dq=test&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Functional_Testing_in_Human_Performance.html?hl=&id=pcAD5Xzi7ukC"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.nl/books/download/Functional_Testing_in_Human_Performance-sample-pdf.acsm?id=pcAD5Xzi7ukC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=pcAD5Xzi7ukC&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Functional Testing in Human Performance is a comprehensive learning tool for novices and an essential reference for advanced clinicians. The text defines the role of function in physical performance and how it can be appropriately tested."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "ijQElKfBaHEC",
+      "etag": "UNujFlS4tlU",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/ijQElKfBaHEC",
+      "volumeInfo": {
+        "title": "Manage Software Testing",
+        "authors": [
+          "Peter Farrell-Vinay"
+        ],
+        "publisher": "CRC Press",
+        "publishedDate": "2008-03-07",
+        "description": "Whether you are inheriting a test team or starting one up, Manage Software Testing is a must-have resource that covers all aspects of test management. It guides you through the business and organizational issues that you are confronted with on a daily basis, explaining what you need to focus on strategically, tactically, and operationally. Using a risk-based approach, the author addresses a range of questions about software product development. The book covers unit, system, and non-functional tests and includes examples on how to estimate the number of bugs expected to be found, the time required for testing, and the date when a release is ready. It weighs the cost of finding bugs against the risks of missing release dates or letting bugs appear in the final released product. It is imperative to determine if bugs do exist and then be able to metric how quickly they can be identified, the cost they incur, and how many remain in the product when it is released. With this book, test managers can effectively and accurately establish these parameters.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "142001384X"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9781420013849"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 600,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "averageRating": 5,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "1.1.0.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=ijQElKfBaHEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=ijQElKfBaHEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=ijQElKfBaHEC&printsec=frontcover&dq=test&hl=&as_pt=BOOKS&cd=13&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=ijQElKfBaHEC&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=ijQElKfBaHEC"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 62.12,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 47.14,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=ijQElKfBaHEC&rdid=book-ijQElKfBaHEC&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 62120000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 47140000,
+              "currencyCode": "EUR"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.nl/books/download/Manage_Software_Testing-sample-pdf.acsm?id=ijQElKfBaHEC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=ijQElKfBaHEC&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Whether you are inheriting a test team or starting one up, Manage Software Testing is a must-have resource that covers all aspects of test management."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "lthW10jo2mUC",
+      "etag": "1LRVZRMZbN8",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/lthW10jo2mUC",
+      "volumeInfo": {
+        "title": "Introduction to Advanced System-on-Chip Test Design and Optimization",
+        "authors": [
+          "Erik Larsson"
+        ],
+        "publisher": "Springer Science & Business Media",
+        "publishedDate": "2005-11-07",
+        "description": "Testing of Integrated Circuits is important to ensure the production of fault-free chips. However, testing is becoming cumbersome and expensive due to the increasing complexity of these ICs. Technology development has made it possible to produce chips where a complete system, with an enormous transistor count, operating at a high clock frequency, is placed on a single die - SOC (System-on-Chip). The device size miniaturization leads to new fault types, the increasing clock frequencies enforces testing for timing faults, and the increasing transistor count results in a higher number of possible fault sites. Testing must handle all these new challenges in an efficient manner having a global system perspective. Test design is applied to make a system testable. In a modular core-based environment where blocks of reusable logic, the so called cores, are integrated to a system, test design for each core include: test method selection, test data (stimuli and responses) generation (ATPG), definition of test data storage and partitioning [off-chip as ATE (Automatic Test Equipment) and/or on-chip as BIST (Built-In Self-Test)], wrapper selection and design (IEEE std 1500), TAM (test access mechanism) design, and test scheduling minimizing a cost function whilst considering limitations and constraint. A system test design perspective that takes all the issues above into account is required in order to develop a globally optimized solution. SOC test design and its optimization is the topic of this book. It gives an introduction to testing, describes the problems related to SOC testing, discusses the modeling granularity and the implementation into EDA (electronic design automation) tools. The book is divided into three sections: i) test concepts, ii) SOC design for test, and iii) SOC test applications. The first part covers an introduction into test problems including faults, fault types, design-flow, design-for-test techniques such as scan-testing and Boundary Scan. The second part of the book discusses SOC related problems such as system modeling, test conflicts, power consumption, test access mechanism design, test scheduling and defect-oriented scheduling. Finally, the third part focuses on SOC applications, such as integrated test scheduling and TAM design, defect-oriented scheduling, and integrating test design with the core selection process.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "1402032072"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9781402032073"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 418,
+        "printType": "BOOK",
+        "categories": [
+          "Technology & Engineering"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.6.6.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=lthW10jo2mUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=lthW10jo2mUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=lthW10jo2mUC&printsec=frontcover&dq=test&hl=&as_pt=BOOKS&cd=14&source=gbs_api",
+        "infoLink": "http://books.google.nl/books?id=lthW10jo2mUC&dq=test&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Introduction_to_Advanced_System_on_Chip.html?hl=&id=lthW10jo2mUC"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.nl/books/download/Introduction_to_Advanced_System_on_Chip-sample-pdf.acsm?id=lthW10jo2mUC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=lthW10jo2mUC&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "A system test design perspective that takes all the issues above into account is required in order to develop a globally optimized solution. SOC test design and its optimization is the topic of this book."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "OLhF4O-3GDkC",
+      "etag": "uMGLVNNng4M",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/OLhF4O-3GDkC",
+      "volumeInfo": {
+        "title": "Aquifer Test Modeling",
+        "authors": [
+          "William C. Walton"
+        ],
+        "publisher": "CRC Press",
+        "publishedDate": "2006-11-15",
+        "description": "In recognition of the trend toward using numerical methdos for analyzing aquifer test data, Aquifer Test Modeling delineates the application of numerical Laplace inversion analytical equations and numerical models and demonstrates the use of public domain software. Written by a leading expert with over fifty years of experience, this highly practical text provides a thorough grounding in the terms and methods employed in aquifer test modeling, while also establishing a protocol for organizing and simplifying conceptual model definition and data analysis. Using graphs, tables, and sample datasets to enhance understanding, the author delineates the five major steps involved in the aquifer test modeling process. He discusses the importance of the conceptual model definition as a framework for organizing, simplifying, and idealizing information. The chapters cover the selection of appropriate aquifer test mathematical model equations compatible with previously defined conceptual models and highlight the importance of reviewing the mathematical assumption and the adjustment of data for any departures. They also explain format selection, technique selection, well function or drawdown calculation, and calibration. The book provides five sample data sets to assist the reader in becoming familiar with WTAQ and MODFLOW aquifer test modeling input and output data file contents with confined nonleaky and unconfined aquifer conditions. It includes conceptual models consisting of abbreviated descriptions of aquifer test facilities, aquifer test data, and aquifer parameter values together with selected sample file sets. These are just a few of the features that make the book a valuable tool for estimating the supply and contamination characteristics of aquifers.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "1420042920"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9781420042924"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 248,
+        "printType": "BOOK",
+        "categories": [
+          "Technology & Engineering"
+        ],
+        "averageRating": 1,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "2.5.8.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=OLhF4O-3GDkC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=OLhF4O-3GDkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=OLhF4O-3GDkC&printsec=frontcover&dq=test&hl=&as_pt=BOOKS&cd=15&source=gbs_api",
+        "infoLink": "http://books.google.nl/books?id=OLhF4O-3GDkC&dq=test&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Aquifer_Test_Modeling.html?hl=&id=OLhF4O-3GDkC"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.nl/books/download/Aquifer_Test_Modeling-sample-pdf.acsm?id=OLhF4O-3GDkC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=OLhF4O-3GDkC&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "These are just a few of the features that make the book a valuable tool for estimating the supply and contamination characteristics of aquifers."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "2iff2q_sJEgC",
+      "etag": "KnZOjwdwvy0",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/2iff2q_sJEgC",
+      "volumeInfo": {
+        "title": "Perl Testing: A Developer's Notebook",
+        "subtitle": "A Developer's Notebook",
+        "authors": [
+          "Ian Langworth",
+          "Chromatic"
+        ],
+        "publisher": "\"O'Reilly Media, Inc.\"",
+        "publishedDate": "2005-07-14",
+        "description": "Is there any sexier topic in software development than software testing? That is, besides game programming, 3D graphics, audio, high-performance clustering, cool websites, et cetera? Okay, so software testing is low on the list. And that's unfortunate, because good software testing can increase your productivity, improve your designs, raise your quality, ease your maintenance burdens, and help to satisfy your customers, coworkers, and managers. Perl has a strong history of automated tests. A very early release of Perl 1.0 included a comprehensive test suite, and it's only improved from there. Learning how Perl's test tools work and how to put them together to solve all sorts of previously intractable problems can make you a better programmer in general. Besides, it's easy to use the Perl tools described to handle all sorts of testing problems that you may encounter, even in other languages. Like all titles in O'Reilly's Developer's Notebook series, this \"all lab, no lecture\" book skips the boring prose and focuses instead on a series of exercises that speak to you instead of at you. Perl Testing: A Developer's Notebook will help you dive right in and: Write basic Perl tests with ease and interpret the results Apply special techniques and modules to improve your tests Bundle test suites along with projects Test databases and their data Test websites and web projects Use the \"Test Anything Protocol\" which tests projects written in languages other than Perl With today's increased workloads and short development cycles, unit tests are more vital to building robust, high-quality software than ever before. Once mastered, these lessons will help you ensure low-level code correctness, reduce software development cycle time, and ease maintenance burdens. You don't have to be a die-hard free and open source software developer who lives, breathes, and dreams Perl to use this book. You just have to want to do your job a little bit better.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781449313081"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1449313086"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 202,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "averageRating": 4,
+        "ratingsCount": 2,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "2.4.1.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=2iff2q_sJEgC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=2iff2q_sJEgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=2iff2q_sJEgC&printsec=frontcover&dq=test&hl=&as_pt=BOOKS&cd=16&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=2iff2q_sJEgC&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=2iff2q_sJEgC"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 20.71,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amount": 20.71,
+          "currencyCode": "EUR"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=2iff2q_sJEgC&rdid=book-2iff2q_sJEgC&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 20710000,
+              "currencyCode": "EUR"
+            },
+            "retailPrice": {
+              "amountInMicros": 20710000,
+              "currencyCode": "EUR"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=2iff2q_sJEgC&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "You don&#39;t have to be a die-hard free and open source software developer who lives, breathes, and dreams Perl to use this book. You just have to want to do your job a little bit better."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "eBvzDwAAQBAJ",
+      "etag": "Xn2wNuDWnqs",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/eBvzDwAAQBAJ",
+      "volumeInfo": {
+        "title": "Science For Everyone : Aptitude Test Problem In Physics",
+        "authors": [
+          "SS KROTOV"
+        ],
+        "publisher": "Arihant Publications India limited",
+        "publishedDate": "2016-05-20",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9789350941447"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "9350941449"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 207,
+        "printType": "BOOK",
+        "categories": [
+          "Study Aids"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.1.1.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=eBvzDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=eBvzDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=eBvzDwAAQBAJ&printsec=frontcover&dq=test&hl=&as_pt=BOOKS&cd=17&source=gbs_api",
+        "infoLink": "http://books.google.nl/books?id=eBvzDwAAQBAJ&dq=test&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Science_For_Everyone_Aptitude_Test_Probl.html?hl=&id=eBvzDwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.nl/books/download/Science_For_Everyone_Aptitude_Test_Probl-sample-pdf.acsm?id=eBvzDwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=eBvzDwAAQBAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "dBtOAQAAIAAJ",
+      "etag": "7FwhOd/+Yvw",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/dBtOAQAAIAAJ",
+      "volumeInfo": {
+        "title": "Test Examples for Nonlinear Programming Codes",
+        "authors": [
+          "W. Hock",
+          "Klaus Schittkowski"
+        ],
+        "publisher": "Springer",
+        "publishedDate": "1981",
+        "description": "... The performance of a nonlinear programming algorithm can only be ascertained by numerical experiments requiring the collection and implementation of test examples in dependence upon the desired performance criterium. This book should be considered as an assisƯ tance for a test designer since it presents an extensive collecƯ tion of nonlinear programming problems which have been used in the past to test or compare optimization programs. He will be inƯ formed about the optimal solution, about the structure of the problem in the neighbourhood of the solution, and, in addition, about the usage of the corresp, onding FORTRAN subroutines if he is interested in obtaining them -ofi a magnetic tape. Chapter I shows how the test examples are documented. In parƯ ticular, the evaluation of computable information about the soluƯ tion of a problem is outlined. It is explained how the optimal solution, the optimal Lagrange-multipliers, and the condition number of the projected Hessian of the Lagrangian are obtained. Furthermore, a classification number is defined allowing a formal description of a test problem, and the documentation scheme is described which is used in Chapter IV to present the problems.",
+        "industryIdentifiers": [
+          {
+            "type": "OTHER",
+            "identifier": "UCAL:B5043479"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 212,
+        "printType": "BOOK",
+        "categories": [
+          "Business & Economics"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "1.5.4.0.preview.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=dBtOAQAAIAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=dBtOAQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=dBtOAQAAIAAJ&q=test&dq=test&hl=&as_pt=BOOKS&cd=18&source=gbs_api",
+        "infoLink": "http://books.google.nl/books?id=dBtOAQAAIAAJ&dq=test&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Test_Examples_for_Nonlinear_Programming.html?hl=&id=dBtOAQAAIAAJ"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=dBtOAQAAIAAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "This book should be considered as an assisƯ tance for a test designer since it presents an extensive collecƯ tion of nonlinear programming problems which have been used in the past to test or compare optimization programs."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "frfBDQAAQBAJ",
+      "etag": "gQREYSj/krU",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/frfBDQAAQBAJ",
+      "volumeInfo": {
+        "title": "Introduction to Aerospace Engineering with a Flight Test Perspective",
+        "authors": [
+          "Stephen Corda"
+        ],
+        "publisher": "John Wiley & Sons",
+        "publishedDate": "2017-03-20",
+        "description": "Comprehensive textbook which introduces the fundamentals of aerospace engineering with a flight test perspective Introduction to Aerospace Engineering with a Flight Test Perspective is an introductory level text in aerospace engineering with a unique flight test perspective. Flight test, where dreams of aircraft and space vehicles actually take to the sky, is the bottom line in the application of aerospace engineering theories and principles. Designing and flying the real machines are often the reasons that these theories and principles were developed. This book provides a solid foundation in many of the fundamentals of aerospace engineering, while illuminating many aspects of real-world flight. Fundamental aerospace engineering subjects that are covered include aerodynamics, propulsion, performance, and stability and control. Key features: Covers aerodynamics, propulsion, performance, and stability and control. Includes self-contained sections on ground and flight test techniques. Includes worked example problems and homework problems. Suitable for introductory courses on Aerospace Engineering. Excellent resource for courses on flight testing. Introduction to Aerospace Engineering with a Flight Test Perspective is essential reading for undergraduate and graduate students in aerospace engineering, as well as practitioners in industry. It is an exciting and illuminating read for the aviation enthusiast seeking deeper understanding of flying machines and flight test.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781118953365"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1118953363"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 925,
+        "printType": "BOOK",
+        "categories": [
+          "Technology & Engineering"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.1.0.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=frfBDQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=frfBDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=frfBDQAAQBAJ&printsec=frontcover&dq=test&hl=&as_pt=BOOKS&cd=19&source=gbs_api",
+        "infoLink": "http://books.google.nl/books?id=frfBDQAAQBAJ&dq=test&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Introduction_to_Aerospace_Engineering_wi.html?hl=&id=frfBDQAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.nl/books/download/Introduction_to_Aerospace_Engineering_wi-sample-pdf.acsm?id=frfBDQAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=frfBDQAAQBAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "This book provides a solid foundation in many of the fundamentals of aerospace engineering, while illuminating many aspects of real-world flight."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "XGGdMQEACAAJ",
+      "etag": "OWoaBiTLPSM",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/XGGdMQEACAAJ",
+      "volumeInfo": {
+        "title": "Express to the TOEFL IBT Test",
+        "authors": [
+          "Tammy LeRoi Gilbert",
+          "Dorothy E. Zemach"
+        ],
+        "publisher": "Allyn & Bacon",
+        "publishedDate": "2012-11-20",
+        "description": "From the publishers of the best selling Longman Course for the TOEFL iBT® Test The Express to the TOEFL iBT® TEST is the ideal way for students to quickly prepare for the TOEFL iBT® and improve their scores. It completely covers all of the skills and question types found on the TOEFL iBT® Test in a shorter amount of time than standard TOEFL iBT® Test preparation textbooks. Students may work through the sections in any order or work only on the sections in which they feel they need the most improvement. The Perfect Core Course Text Student Book for use in class or for independent study, including: Clear explanations and computer screen pictures of each question type Skill Builder lessons that help students learn the most important skills Authentic practice with sample test items in the style of the TOEFL iBT® Test Express Tips with useful suggestions and essential strategies for answering questions correctly A full Practice Test and Post-Tests prepare students for success on the exam Complete Digital Support CD-ROM containing: An interactive, full-length Practice Test in practice or timed mode A comprehensive Post-Test Explanations for both correct and incorrect answers with sample answers for Speaking and Writing A full MP3 audio program and audioscript A “Send” feature that allows electronic submission of test results and spoken and written responses Online TOEFL practice at iTests.com, with special features: the ability to email results to the instructor, print scores, and retake the test. SYSTEM REQUIREMENTS WINDOWS Windows 7, Vista, or XP 500 MHz or higher processor 100 MB available on hard drive 256 MB RAM minimum (512 MB RAM or higher recommended) Quad-speed CD-ROM drive Sound card, speakers, and computer microphone (or other recording device) Internet connection (for sending and receiving data) CEFR TOEFL Test Score A1—A-2 0—56 B1 57—86 B2 87—109 C1 110—120 TOEFL iBT ® is a registered trademark of Educational Testing Services (ETS). This publication is not endorsed or approved by ETS.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0132861623"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780132861625"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 330,
+        "printType": "BOOK",
+        "categories": [
+          "Juvenile Nonfiction"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=XGGdMQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=XGGdMQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=XGGdMQEACAAJ&dq=test&hl=&as_pt=BOOKS&cd=20&source=gbs_api",
+        "infoLink": "http://books.google.nl/books?id=XGGdMQEACAAJ&dq=test&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Express_to_the_TOEFL_IBT_Test.html?hl=&id=XGGdMQEACAAJ"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=XGGdMQEACAAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "From the publishers of the best selling Longman Course for the TOEFL iBT® Test The Express to the TOEFL iBT® TEST is the ideal way for students to quickly prepare for the TOEFL iBT® and improve their scores."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "JnKeAwAAQBAJ",
+      "etag": "fOk4DTuSIKA",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/JnKeAwAAQBAJ",
+      "volumeInfo": {
+        "title": "DSM-5 Self-Exam Questions",
+        "subtitle": "Test Questions for the Diagnostic Criteria",
+        "authors": [
+          "Philip R. Muskin, M.D."
+        ],
+        "publisher": "American Psychiatric Pub",
+        "publishedDate": "2014-05-05",
+        "description": "DSM-5® Self-Exam Questions: Test Questions for the Diagnostic Criteria will be useful to a wide audience of professionals seeking to understand the changes made in DSM-5®. This book includes detailed questions and answers to broaden and deepen the reader's knowledge of DSM-5® and promote learning of current diagnostic concepts and classification.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781585624676"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1585624675"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 482,
+        "printType": "BOOK",
+        "categories": [
+          "Medical"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=JnKeAwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=JnKeAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=JnKeAwAAQBAJ&printsec=frontcover&dq=test&hl=&as_pt=BOOKS&cd=21&source=gbs_api",
+        "infoLink": "http://books.google.nl/books?id=JnKeAwAAQBAJ&dq=test&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/DSM_5_Self_Exam_Questions.html?hl=&id=JnKeAwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=JnKeAwAAQBAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "This book includes detailed questions and answers to broaden and deepen the reader&#39;s knowledge of DSM-5® and promote learning of current diagnostic concepts and classification."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "3Hd4oAEACAAJ",
+      "etag": "i/3ec2juLIM",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/3Hd4oAEACAAJ",
+      "volumeInfo": {
+        "title": "Outsmart Test Anxiety",
+        "subtitle": "A Workbook to Help Kids Conquer Test Anxiety",
+        "authors": [
+          "Erainna Winnett"
+        ],
+        "publisher": "Counseling with Heart",
+        "publishedDate": "2014-06-11",
+        "description": "Outsmart Test Anxiety is a workbook to help kids who struggle with test anxiety. Through therapeutic art and writing exercise, kids can get their feelings out, process and learn to conquer their anxiety, learn strategies for studying and test-taking, and boost self-esteem. Designed for kids aged seven to 12, this workbook is meant to be used as a counseling tool to foster positive self-image and create a practical pathway to overcoming test anxiety. Ages 7-12, Softcover, 40 pages Other titles available in the Helping Kids Heal Series Saying Goodbye: Memory Book Memories of You: Pet Memory Book Beyond Being Bullied: A Resiliency Workbook for Kids Who Have Been Bullied Better Days: A Workbook to Help Kids Better Understand and Accept Retention A Brighter Tomorrow: A Workbook to Help Kids Cope with Traumatic Events Chill Out: A Workbook to Help Kids Learn to Control Their Anger Mom or Dad's House?: A Workbook to Help Kids Cope with Divorce Broken Promises: When Parents Don't Keep Their Word Cyber Savvy: A Workbook for Kids Who Have Been a Target of Cyberbullying Twice the Love: A Workbook for Kids in Blended Families Somebodyness: A Workbook to Help Kids Improve Their Self-Confidence Each workbook in the Helping Kids Heal Series allows children to process their pain through art therapy, self-reflection, and self-awareness activities.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0615983537"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780615983530"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 38,
+        "printType": "BOOK",
+        "categories": [
+          "Stress in children"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=3Hd4oAEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=3Hd4oAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=3Hd4oAEACAAJ&dq=test&hl=&as_pt=BOOKS&cd=22&source=gbs_api",
+        "infoLink": "http://books.google.nl/books?id=3Hd4oAEACAAJ&dq=test&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Outsmart_Test_Anxiety.html?hl=&id=3Hd4oAEACAAJ"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=3Hd4oAEACAAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "What parents are saying &quot;With so many formal test I&#39;ve noticed my child has developed severe test anxiety. After my neighbor recommended this book, I have seen him become less stressed."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "IqfDOFj8ufkC",
+      "etag": "iLV1vvX0Z+I",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/IqfDOFj8ufkC",
+      "volumeInfo": {
+        "title": "Brilliant Verbal Reasoning Tests",
+        "subtitle": "Everything You Need to Know to Pass Verbal Reasoning Tests",
+        "authors": [
+          "Rob Williams"
+        ],
+        "publisher": "Pearson Education",
+        "publishedDate": "2009",
+        "description": "Verbal reasoning tests are increasingly a part of the recruitment process, but taking verbal reasoning tests is something most of us dread, let alone practise. Brilliant Verbal Reasoning Tests will give you all the practise you need. You'll gain experience with real practice questions and answers, become familiar with all the common tests, both general and organization-specific, and feel comfortable with a range of difficulty levels. Written by an experienced psychologist who has designed and administered verbal reasoning tests for many years, you'll find a variety of effective strategies, tactics and tips to achieve peak performance. Features bull; bull;6 test types covered bull;Approx 50 questions and answers per test type bull;Approx 100 pages of practice tests bull;More practice tests available online. Rob Williams is a chartered occupational psychologist who has worked for several of the UK's leading test publishers. The author of numerous verbal reasoning tests and psychometric tools, Rob specialises in assessments for recruitment and selection. He set up London-based Rob Williams Assessment Ltd in 2006 and has since consulted on testing issues across both the private and public sectors. Rob has designed and delivered psychometric tools for a wide range of clients.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0273724533"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780273724537"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 266,
+        "printType": "BOOK",
+        "categories": [
+          "Business & Economics"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.2.3.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=IqfDOFj8ufkC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=IqfDOFj8ufkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=IqfDOFj8ufkC&printsec=frontcover&dq=test&hl=&as_pt=BOOKS&cd=23&source=gbs_api",
+        "infoLink": "http://books.google.nl/books?id=IqfDOFj8ufkC&dq=test&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Brilliant_Verbal_Reasoning_Tests.html?hl=&id=IqfDOFj8ufkC"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.nl/books/download/Brilliant_Verbal_Reasoning_Tests-sample-pdf.acsm?id=IqfDOFj8ufkC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=IqfDOFj8ufkC&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Verbal reasoning tests are increasingly a part of the recruitment process, but taking verbal reasoning tests is something most of us dread, let alone practise. Brilliant Verbal Reasoning Tests will give you all the practise you need."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "9aohMQAACAAJ",
+      "etag": "vooXgKKyvPc",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/9aohMQAACAAJ",
+      "volumeInfo": {
+        "title": "Test Driven Development in Ruby",
+        "subtitle": "A Practical Introduction to TDD Using Problem and Solution Domain Analysis",
+        "authors": [
+          "Bala Paranj"
+        ],
+        "publisher": "Apress",
+        "publishedDate": "2017-04-05",
+        "description": "Learn the basics of test driven development (TDD) using Ruby. You will carry out problem domain analysis, solution domain analysis, designing test cases, and writing tests first. These fundamental concepts will give you a solid TDD foundation to build upon. Test Driven Development in Ruby is written by a developer for developers. The concepts are first explained, then a coding demo illustrates how to apply the theory in practice. At the end of each chapter an exercise is given to reinforce the material. Complete with working files and code samples, you'll be able to work alongside the author, a trainer, by following the material in this book. What You Will Learn Carry out problem domain analysis, solution domain analysis, designing test cases, and writing tests first Use assertions Discover the structure of a test and the TDD cycle Gain an understanding of minimal implementation, starter test, story test, and next test Handle refactoring using Ruby Hide implementation details Test precisely and concretely Make your code robust Who This Book Is For Experienced Ruby programmers or web developers with some prior experience with Ruby.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "1484226372"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9781484226377"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 244,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=9aohMQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=9aohMQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=9aohMQAACAAJ&dq=test&hl=&as_pt=BOOKS&cd=24&source=gbs_api",
+        "infoLink": "http://books.google.nl/books?id=9aohMQAACAAJ&dq=test&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Test_Driven_Development_in_Ruby.html?hl=&id=9aohMQAACAAJ"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=9aohMQAACAAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "At the end of each chapter an exercise is given to reinforce the material. Complete with working files and code samples, you&#39;ll be able to work alongside the author, a trainer, by following the material in this book."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "-dWHFpewCXcC",
+      "etag": "Rf8e8on28QQ",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/-dWHFpewCXcC",
+      "volumeInfo": {
+        "title": "The Numeracy Test Workbook",
+        "authors": [
+          "Mike Bryon"
+        ],
+        "publisher": "Kogan Page Publishers",
+        "publishedDate": "2006",
+        "description": "Designed as a companion to the highly successful \"How to Pass Numeracy Tests,\" this workbook contains 600 new practice questions and practical material and realistic timed mock tests to help readers recognize, interpret, and solve numerical problems.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0749440457"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780749440459"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 244,
+        "printType": "BOOK",
+        "categories": [
+          "Business & Economics"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.4.4.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=-dWHFpewCXcC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=-dWHFpewCXcC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=-dWHFpewCXcC&printsec=frontcover&dq=test&hl=&as_pt=BOOKS&cd=25&source=gbs_api",
+        "infoLink": "http://books.google.nl/books?id=-dWHFpewCXcC&dq=test&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_Numeracy_Test_Workbook.html?hl=&id=-dWHFpewCXcC"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.nl/books/download/The_Numeracy_Test_Workbook-sample-pdf.acsm?id=-dWHFpewCXcC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=-dWHFpewCXcC&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Designed as a companion to the highly successful &quot;How to Pass Numeracy Tests,&quot; this workbook contains 600 new practice questions and practical material and realistic timed mock tests to help readers recognize, interpret, and solve numerical ..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "Dq04DwAAQBAJ",
+      "etag": "TYIp0QhrCj8",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/Dq04DwAAQBAJ",
+      "volumeInfo": {
+        "title": "Comprehensive Guide to VITEEE Online Test with 3 Online Tests - 4th Edition",
+        "authors": [
+          "Disha Experts"
+        ],
+        "publisher": "Disha Publications",
+        "publishedDate": "2017-10-05",
+        "description": "The book 'Comprehensive Guide to VITEEE Online Test with 3 Online Tests 4th Edition' covers the 100% syllabus in Physics, Chemistry and Mathematics as per latest exam pattern. The book also introduces the English Grammar, Comprehension & Pronunciation portion as introduced in the syllabus in the last year. The book is further empowered with 3 Online Tests. Each chapter contains Key Concepts, Solved Examples, Exercises in 2 levels with solutions.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9789386629883"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "9386629887"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 797,
+        "printType": "BOOK",
+        "averageRating": 5,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=Dq04DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=Dq04DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=Dq04DwAAQBAJ&printsec=frontcover&dq=test&hl=&as_pt=BOOKS&cd=26&source=gbs_api",
+        "infoLink": "http://books.google.nl/books?id=Dq04DwAAQBAJ&dq=test&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Comprehensive_Guide_to_VITEEE_Online_Tes.html?hl=&id=Dq04DwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.nl/books/download/Comprehensive_Guide_to_VITEEE_Online_Tes-sample-pdf.acsm?id=Dq04DwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=Dq04DwAAQBAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "The book also introduces the English Grammar, Comprehension &amp; Pronunciation portion as introduced in the syllabus in the last year. The book is further empowered with 3 Online Tests."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "Z59NPgAACAAJ",
+      "etag": "4Ne2rqJ/Wdc",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/Z59NPgAACAAJ",
+      "volumeInfo": {
+        "title": "Test of the Twins",
+        "authors": [
+          "Margaret Weis",
+          "Tracy Hickman",
+          "Michael Williams"
+        ],
+        "publishedDate": "1986",
+        "description": "\"Caramon must travel back and forth in time in order to save the world from his twin brother, Raistlin who has become the Master of the Tower of High Sorcery.\" --",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0786918063"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780786918065"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 345,
+        "printType": "BOOK",
+        "categories": [
+          "Imaginary places"
+        ],
+        "averageRating": 4,
+        "ratingsCount": 13,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=Z59NPgAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=Z59NPgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=Z59NPgAACAAJ&dq=test&hl=&as_pt=BOOKS&cd=27&source=gbs_api",
+        "infoLink": "http://books.google.nl/books?id=Z59NPgAACAAJ&dq=test&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Test_of_the_Twins.html?hl=&id=Z59NPgAACAAJ"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=Z59NPgAACAAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "&quot;Caramon must travel back and forth in time in order to save the world from his twin brother, Raistlin who has become the Master of the Tower of High Sorcery.&quot; --"
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "KDVgYgEACAAJ",
+      "etag": "CMLAf4RnXb0",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/KDVgYgEACAAJ",
+      "volumeInfo": {
+        "title": "The Psychopath Test",
+        "subtitle": "A Journey Through the Madness Industry",
+        "authors": [
+          "Jon Ronson"
+        ],
+        "publisher": "Picador USA",
+        "publishedDate": "2012-01",
+        "description": "The Sunday Times top-ten bestseller from the author of The Men Who Stare at Goats This is an utterly compelling and often unbelievable adventure into the world of madness. Jon Ronson meets everybody from a Broadmoor inmate who swears he faked a mental disorder to get a lighter sentence but is now stuck there to the influential psychologist who developed the industry standard Psychopath Test and who is convinced that many important CEOs and politicians are in fact psychopaths. Combining Jon's trademark humour, charm and investigative incision, The Psychopath Test is a deeply honest book unearthing dangerous truths and asking serious questions about how we define normality in a world where we are increasingly judged by our maddest edges.",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0330492276"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780330492270"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 291,
+        "printType": "BOOK",
+        "categories": [
+          "Humor"
+        ],
+        "averageRating": 3.5,
+        "ratingsCount": 1693,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=KDVgYgEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=KDVgYgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=KDVgYgEACAAJ&dq=test&hl=&as_pt=BOOKS&cd=28&source=gbs_api",
+        "infoLink": "http://books.google.nl/books?id=KDVgYgEACAAJ&dq=test&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_Psychopath_Test.html?hl=&id=KDVgYgEACAAJ"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=KDVgYgEACAAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "In this madcap journey, a bestselling journalist investigates psychopaths and the industry of doctors, scientists, and everyone else who studies them."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "SsYl9RU-zGgC",
+      "etag": "AHQcK4OMYH8",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/SsYl9RU-zGgC",
+      "volumeInfo": {
+        "title": "Lessons Learned in Software Testing",
+        "subtitle": "A Context-Driven Approach",
+        "authors": [
+          "Cem Kaner",
+          "James Bach",
+          "Bret Pettichord"
+        ],
+        "publisher": "Wiley",
+        "publishedDate": "2001-12-31",
+        "description": "Decades of software testing experience condensed into the most important lessons learned. The world's leading software testing experts lend you their wisdom and years of experience to help you avoid the most common mistakes in testing software. Each lesson is an assertion related to software testing, followed by an explanation or example that shows you the how, when, and why of the testing lesson. More than just tips, tricks, and pitfalls to avoid, Lessons Learned in Software Testing speeds you through the critical testing phase of the software development project without the extensive trial and error it normally takes to do so. The ultimate resource for software testers and developers at every level of expertise, this guidebook features: * Over 200 lessons gleaned from over 30 years of combined testing experience * Tips, tricks, and common pitfalls to avoid by simply reading the book rather than finding out the hard way * Lessons for all key topic areas, including test design, test management, testing strategies, and bug reporting * Explanations and examples of each testing trouble spot help illustrate each lesson's assertion",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_10",
+            "identifier": "0471081124"
+          },
+          {
+            "type": "ISBN_13",
+            "identifier": "9780471081128"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "pageCount": 320,
+        "printType": "BOOK",
+        "categories": [
+          "Computers"
+        ],
+        "averageRating": 4.5,
+        "ratingsCount": 4,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "4.2.2.0.preview.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=SsYl9RU-zGgC&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=SsYl9RU-zGgC&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=SsYl9RU-zGgC&q=test&dq=test&hl=&as_pt=BOOKS&cd=29&source=gbs_api",
+        "infoLink": "http://books.google.nl/books?id=SsYl9RU-zGgC&dq=test&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Lessons_Learned_in_Software_Testing.html?hl=&id=SsYl9RU-zGgC"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=SsYl9RU-zGgC&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "In this groundbreaking new book, they have compiled 293 pieces of experience-tested advice for you to put to work in your testing projects."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "EZ5VAAAAMAAJ",
+      "etag": "9NYsUjA067E",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/EZ5VAAAAMAAJ",
+      "volumeInfo": {
+        "title": "IEEE VLSI Test Symposium",
+        "publishedDate": "2005",
+        "industryIdentifiers": [
+          {
+            "type": "OTHER",
+            "identifier": "UOM:39015058299242"
+          }
+        ],
+        "readingModes": {
+          "text": false,
+          "image": false
+        },
+        "printType": "BOOK",
+        "categories": [
+          "Application-specific integrated circuits"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.3.2.0.preview.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=EZ5VAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=EZ5VAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.nl/books?id=EZ5VAAAAMAAJ&q=test&dq=test&hl=&as_pt=BOOKS&cd=30&source=gbs_api",
+        "infoLink": "http://books.google.nl/books?id=EZ5VAAAAMAAJ&dq=test&hl=&as_pt=BOOKS&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/IEEE_VLSI_Test_Symposium.html?hl=&id=EZ5VAAAAMAAJ"
+      },
+      "saleInfo": {
+        "country": "NL",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "NL",
+        "viewability": "NO_PAGES",
+        "embeddable": false,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=EZ5VAAAAMAAJ&hl=&as_pt=BOOKS&source=gbs_api",
+        "accessViewStatus": "NONE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "In this section, we first discuss prior work, and then review the basic concepts of NoC operation. 2.1 Prior work The design and optimization of dedicated TAMs for \u003cb\u003etest\u003c/b\u003e access to SoCs has been the focus of several studies [2, 11]."
+      }
+    }
+  ]
+}

@@ -1,12 +1,20 @@
 import {jest} from "@jest/globals";
 import jwt from "jsonwebtoken";
 import * as mongoose from "mongoose";
+import {BookService} from "../services/book-service";
+
+const searchResultExample = require("./search-result-example.json");
 
 declare global {
     var signin: () => string[];
 }
 
+const sendRequestMock = async (path: string, params: Record<string, string | number>) => {
+    return searchResultExample;
+}
+
 jest.mock("../nats-wrapper");
+jest.spyOn(BookService, 'sendRequest').mockImplementation(sendRequestMock);
 
 beforeAll(async () => {
     process.env.JWT_KEY = 'secret123';
