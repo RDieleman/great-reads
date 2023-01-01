@@ -7,6 +7,7 @@ import {privacyRouter} from "./routes/privacy";
 import {NotFoundError} from "./errors/not-found-error";
 import {errorHandler} from "./middlewares/error-handler";
 import rateLimit from "express-rate-limit";
+import {shelfRouter} from "./routes/shelf";
 
 const app = express();
 
@@ -33,6 +34,7 @@ app.use(cookieSession({
 }));
 
 app.use(privacyRouter);
+app.use(shelfRouter);
 
 app.all('*', async () => {
     throw new NotFoundError();
