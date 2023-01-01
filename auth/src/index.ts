@@ -1,12 +1,14 @@
 import mongoose from "mongoose";
 import {app} from "./app";
-import {TokenRevokedListener} from "./events/token_revoked/token-revoked-listener";
 import {natsWrapper} from "./nats-wrapper";
 
 const start = async () => {
     // Verify environment variables
     if (!process.env.JWT_KEY) {
         throw new Error('JWT_KEY must be defined');
+    }
+    if (!process.env.COOKIE_KEY) {
+        throw new Error('COOKIE_KEY must be defined');
     }
     if (!process.env.MONGO_URI) {
         throw new Error('MONGO_URI must be defined');
@@ -50,9 +52,6 @@ const start = async () => {
         })
         process.on('SIGINT', () => natsWrapper.client.close());
         process.on('SIGTERM', () => natsWrapper.client.close());
-
-        // Start listeners
-        new TokenRevokedListener(natsWrapper.client).listen();
     } catch (err) {
         console.log(err);
     }
