@@ -4,6 +4,8 @@ import {User} from "../models/user";
 import {validateRequest} from "../middlewares/validate-request";
 import {BadRequestError} from "../errors/bad-request-error";
 import {SessionManager} from "../services/session-manager";
+import {AccountCreatedPublisher} from "../events/account_created/account-created-publisher";
+import {natsWrapper} from "../nats-wrapper";
 
 const router = express.Router();
 
@@ -32,6 +34,11 @@ router.post(
         const user = User.build({email, password});
         await user.save();
 
+        // Publish creation event.
+        new AccountCreatedPublisher(natsWrapper.client).publish({
+            userId: user.id
+        });
+        
         // Generate session
         req.session = SessionManager.generate({
             id: user.id,

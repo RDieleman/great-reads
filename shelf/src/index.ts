@@ -3,6 +3,7 @@ import {app} from "./app";
 import {TokenRevokedListener} from "./events/token_revoked/token-revoked-listener";
 import {natsWrapper} from "./nats-wrapper";
 import {AccountDeletedListener} from "./events/account_deleted/account-deleted-listener";
+import {AccountCreatedListener} from "./events/account_created/account-created-listener";
 
 const start = async () => {
     // Verify environment variables
@@ -52,6 +53,7 @@ const start = async () => {
         // Start listeners
         new TokenRevokedListener(natsWrapper.client).listen();
         new AccountDeletedListener(natsWrapper.client).listen();
+        new AccountCreatedListener(natsWrapper.client).listen();
 
     } catch (err) {
         console.log(err);
