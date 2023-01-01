@@ -4,7 +4,7 @@ import {TokenRevokedEvent} from "./token-revoked-event";
 import {Subjects} from "../subjects";
 
 export class TokenRevokedListener extends Listener<TokenRevokedEvent> {
-    queueGroupName = 'auth-service';
+    queueGroupName = 'book-info-service';
     readonly subject = Subjects.TOKEN_REVOKED;
 
     onMessage(data: TokenRevokedEvent['data'], msg: Message): void {
