@@ -25,7 +25,7 @@ app.use(limiter);
 app.use(json());
 app.set('query parser', 'simple');
 app.use(cookieSession({
-    signed: true,
+    signed: false,
     secure: true,
     httpOnly: true,
     sameSite: true,
