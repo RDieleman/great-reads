@@ -25,10 +25,13 @@ app.use(limiter);
 app.use(json());
 app.set('query parser', 'simple');
 app.use(cookieSession({
-    signed: false,
-    secure: false,
+    signed: true,
+    secure: true,
     httpOnly: true,
     sameSite: true,
+    keys: [
+        process.env.COOKIE_KEY!
+    ]
 }));
 
 app.use(privacyRouter);

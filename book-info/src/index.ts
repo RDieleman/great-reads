@@ -7,6 +7,9 @@ const start = async () => {
     if (!process.env.JWT_KEY) {
         throw new Error('JWT_KEY must be defined');
     }
+    if (!process.env.COOKIE_KEY) {
+        throw new Error('COOKIE_KEY must be defined');
+    }
     if (!process.env.NATS_URL) {
         throw new Error('NATS_URL must be defined')
     }
