@@ -22,6 +22,16 @@ build:
         dockerfile: Dockerfile
         buildArgs:
           target: dev
+    - image: rdieleman/shelf
+      context: shelf
+      sync:
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .
+      docker:
+        dockerfile: Dockerfile
+        buildArgs:
+          target: dev
     - image: rdieleman/client
       context: client
       sync:
