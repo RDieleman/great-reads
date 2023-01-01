@@ -1,27 +1,60 @@
+import {MongoMemoryServer} from "mongodb-memory-server";
 import {jest} from "@jest/globals";
 import jwt from "jsonwebtoken";
-import * as mongoose from "mongoose";
+import mongoose from "mongoose";
+import {User} from "../models/user";
 
 declare global {
-    var signin: () => string[];
+    var signin: () => Promise<string[]>;
 }
 
 jest.mock("../nats-wrapper");
 
+let mongo: any;
+
 beforeAll(async () => {
     process.env.JWT_KEY = 'secret123';
+
+    mongo = await MongoMemoryServer.create();
+    const mongoUri = mongo.getUri();
+
+    await mongoose.connect(mongoUri, {});
 });
 
 beforeEach(async () => {
     jest.clearAllMocks();
+
+    const collections = await mongoose.connection.db.collections();
+
+    for (let collection of collections) {
+        await collection.deleteMany({});
+    }
 });
 
-global.signin = () => {
+// Stop database.
+afterAll(async () => {
+    if (mongo) {
+        await mongo.stop();
+    }
+
+    await mongoose.connection.close();
+});
+
+global.signin = async () => {
     // Build a JWT payload.  { id, email }
     const payload = {
-        id: new mongoose.Types.ObjectId().toHexString(),
-        email: "test@test.com",
+        userInfo: {
+            id: new mongoose.Types.ObjectId().toHexString(),
+            email: "test@test.com",
+        }
     };
+
+    const user = User.build({
+        read: [], reading: [], wantToRead: [],
+        userId: payload.userInfo.id
+    });
+
+    await user.save();
 
     // Create the JWT!
     const token = jwt.sign(payload, process.env.JWT_KEY!);
