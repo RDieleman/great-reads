@@ -29,6 +29,13 @@ spec:
                 name: book-info-srv
                 port:
                   number: 3000
+          - path: /api/shelf/?(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: shelf-srv
+                port:
+                  number: 3000
           - path: /?(.*)
             pathType: Prefix
             backend:

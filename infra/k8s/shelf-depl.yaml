@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shelf-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shelf
+  template:
+    metadata:
+      labels:
+        app: shelf
+    spec:
+      containers:
+        - name: shelf
+          image: rdieleman/shelf
+          env:
+            - name: NATS_CLIENT_ID
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: NATS_URL
+              value: 'http://nats-srv:4222'
+            - name: NATS_CLUSTER_ID
+              value: greatreads
+            - name: MONGO_URI
+              valueFrom:
+                secretKeyRef:
+                  name: db-secret-shelf
+                  key: DB_URI
+            - name: JWT_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: jwt-secret
+                  key: JWT_KEY
+            - name: COOKIE_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: cookie-secret
+                  key: KEY
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: shelf-srv
+spec:
+  selector:
+    app: shelf
+  ports:
+    - name: shelf
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
