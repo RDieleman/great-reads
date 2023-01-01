@@ -7,6 +7,8 @@ import {BadRequestError} from "../errors/bad-request-error";
 import {SessionManager} from "../services/session-manager";
 import {GoogleService} from "../services/google-service";
 import {validateRequest} from "../middlewares/validate-request";
+import {AccountCreatedPublisher} from "../events/account_created/account-created-publisher";
+import {natsWrapper} from "../nats-wrapper";
 
 const router = express.Router();
 
@@ -70,9 +72,14 @@ router.post(
         // Create if it doesn't exist.
         if (!user) {
             // @ts-ignore
-            user = User.build({"email": googleAccount!.email});
+            user = await User.build({"email": googleAccount!.email});
+
             // @ts-ignore
             await user.save();
+
+            new AccountCreatedPublisher(natsWrapper.client).publish({
+                userId: user!.id
+            })
         }
 
         if (!user) {
