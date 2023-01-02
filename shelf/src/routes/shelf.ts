@@ -5,6 +5,8 @@ import {body} from "express-validator";
 import {ShelfType, User} from "../models/user";
 import {validateRequest} from "../middlewares/validate-request";
 import {NotFoundError} from "../errors/not-found-error";
+import {BookShelvedPublisher} from "../events/book_shelved/book-shelved-publisher";
+import {natsWrapper} from "../nats-wrapper";
 
 const router = express.Router();
 
@@ -55,6 +57,12 @@ router.post(
         })
 
         shelves.save();
+
+        new BookShelvedPublisher(natsWrapper.client).publish({
+            bookId: bookId,
+            targetShelf: shelfType,
+            userId: userId
+        });
 
         res.status(200).send(shelves);
     });
