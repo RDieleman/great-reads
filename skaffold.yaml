@@ -32,6 +32,16 @@ build:
         dockerfile: Dockerfile
         buildArgs:
           target: dev
+    - image: rdieleman/timeline
+      context: timeline
+      sync:
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .
+      docker:
+        dockerfile: Dockerfile
+        buildArgs:
+          target: dev
     - image: rdieleman/client
       context: client
       sync:

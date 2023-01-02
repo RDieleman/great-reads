@@ -1,0 +1,13 @@
+name: test-timeline
+
+on:
+  pull_request:
+    paths:
+      - 'timeline/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: cd timeline && npm install && npm run test:ci
