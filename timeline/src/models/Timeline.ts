@@ -67,4 +67,4 @@ timelineSchema.statics.build = (attrs: TimelineAttrs) => {
 }
 const Timeline = mongoose.model<TimelineDoc, TimelineModel>('Timeline', timelineSchema);
 
-export {Timeline, TimelineDoc, ShelfType};
+export {Timeline, TimelineDoc, ShelfType, ShelfEvent};

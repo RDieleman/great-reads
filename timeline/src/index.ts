@@ -4,6 +4,7 @@ import {TokenRevokedListener} from "./events/token_revoked/token-revoked-listene
 import {natsWrapper} from "./nats-wrapper";
 import {AccountDeletedListener} from "./events/account_deleted/account-deleted-listener";
 import {AccountCreatedListener} from "./events/account_created/account-created-listener";
+import {BookShelvedListener} from "./events/book_shelved/book-shelved-listener";
 
 const start = async () => {
     // Verify environment variables
@@ -54,7 +55,7 @@ const start = async () => {
         new TokenRevokedListener(natsWrapper.client).listen();
         new AccountDeletedListener(natsWrapper.client).listen();
         new AccountCreatedListener(natsWrapper.client).listen();
-
+        new BookShelvedListener(natsWrapper.client).listen();
     } catch (err) {
         console.log(err);
     }
