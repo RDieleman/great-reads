@@ -4,13 +4,18 @@ import * as mongoose from "mongoose";
 import {BookService} from "../services/book-service";
 
 const searchResultExample = require("./search-result-example.json");
+const volumeResultExample = require("./volume-result-example.json");
 
 declare global {
     var signin: () => string[];
 }
 
 const sendRequestMock = async (path: string, params: Record<string, string | number>) => {
-    return searchResultExample;
+    if (path.startsWith("/volumes/")) {
+        return volumeResultExample;
+    } else {
+        return searchResultExample;
+    }
 }
 
 jest.mock("../nats-wrapper");

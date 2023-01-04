@@ -1,26 +1,10 @@
-import {useEffect} from "react";
-import Router from "next/router";
+import useRouter from "../hooks/use-router";
 
-const LandingPage = (context) => {
-    console.log("Current user: ", context.currentUser);
+const LandingPage = ({currentUser}) => {
+    const router = useRouter();
 
-    useEffect(() => {
-        if (!context.currentUser) {
-            Router.push('/auth/signin');
-        }
-    }, []);
-
-    if (!context.currentUser) {
-        return <h1 className="container">Redirecting...</h1>
-    }
-
-    return <div className="container">
-        <h1>Home</h1>
-        <hr/>
-        <div>
-            Logged in as <b>{context.currentUser.userInfo.email}</b>!
-        </div>
-    </div>
+    const path = (!currentUser) ? "/auth/signin" : "/dashboard";
+    return router.push(path);
 }
 
 export default LandingPage;

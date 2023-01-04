@@ -27,4 +27,17 @@ router.get(
         res.status(200).send(result);
     });
 
-export {router as searchRouter};
+router.get(
+    '/api/book-info/volume',
+    query("id").isString().notEmpty(),
+    currentUser,
+    requireAuth,
+    validateRequest,
+    async (req: Request, res: Response) => {
+        const {id} = req.query;
+
+        const result = await BookService.getVolume(id as string);
+        res.status(200).send(result);
+    });
+
+export {router as bookRouter};
