@@ -60,11 +60,10 @@ class BookService {
 
         const params: Record<string, string | number> = {
             "q": term,
-            "startIndex": pageInfo.index,
+            "startIndex": pageInfo.index * pageInfo.items,
             "maxResults": pageInfo.items,
             "printType": SearchPrintType.BOOK,
-            "projection": SearchProjection.FULL,
-            "sortBy": SearchSortBy.RELEVANCE
+            "projection": SearchProjection.FULL
         }
 
         const data = await this.sendRequest("/volumes", params);
@@ -73,6 +72,11 @@ class BookService {
             totalItems: data.totalItems,
             results: data.items.map((bookData: any) => this.parseBook(bookData))
         };
+    }
+
+    static getVolume = async (id: string): Promise<BookInfo> => {
+        const data = await this.sendRequest("/volumes/" + id, {});
+        return this.parseBook(data);
     }
 
     static sendRequest = async (

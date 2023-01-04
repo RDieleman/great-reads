@@ -7,7 +7,7 @@ import rateLimit from "express-rate-limit";
 import {NotFoundError} from "./errors/not-found-error";
 import {errorHandler} from "./middlewares/error-handler";
 import {privacyRouter} from "./routes/privacy";
-import {searchRouter} from "./routes/search";
+import {bookRouter} from "./routes/book";
 
 const app = express();
 
@@ -35,7 +35,7 @@ app.use(cookieSession({
 }));
 
 app.use(privacyRouter);
-app.use(searchRouter);
+app.use(bookRouter);
 
 app.all('*', async () => {
     throw new NotFoundError();

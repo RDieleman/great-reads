@@ -1,0 +1,96 @@
+{
+  "kind": "books#volume",
+  "id": "_cI_AQAAQBAJ",
+  "etag": "F+rI9kWolBA",
+  "selfLink": "https://www.googleapis.com/books/v1/volumes/_cI_AQAAQBAJ",
+  "volumeInfo": {
+    "title": "De test",
+    "authors": [
+      "Joelle Charbonneau"
+    ],
+    "publisher": "Karakter",
+    "publishedDate": "2013-10-08",
+    "description": "De Test is het eerste deel van een nieuwe serie waarop de fans van De Hongerspelen en Inwijding al maanden wachten! `De Test kruipt onder je huid en laat je niet meer los. De spanning, angst en woede van Cia zijn levensecht. Toen het boek uit was, kon ik nog maar aan één ding denken: meer! Marieke (26 jaar) De jonge, ambitieuze Cia Vale is tot haar vreugde een van de uitverkorenen om deel te nemen aan De Test: een jaarlijks terugkerend evenement waarvoor alleen de allerbeste studenten uit de koloniën van het Verenigd Gemenebest geselecteerd worden. Zij die slagen voor De Test hebben de wereld aan hun voeten liggen en zullen klaargestoomd worden tot toekomstige leiders van hun land. Vol goede moed, maar met waarschuwingen van haar vader in haar achterhoofd, vertrekt Cia naar de hoofdstad, waar De Test zal plaatsvinden. Als blijkt dat de inhoud van de diverse beproevingen niet alleen geestelijk, maar ook fysiek het uiterste van de kandidaten vraagt, ontstaat er een onderlinge strijd tussen de deelnemers. Cia komt al snel tot de ontdekking dat ze op zichzelf aangewezen is, maar door haar intuïtie te volgen en intelligentie en durf te tonen komt ze steeds een testronde verder, terwijl haar medekandidaten stuk voor stuk het toneel moeten verlaten, levend of dood... Heeft Cia het in zich om ook de allerlaatste horde te nemen? Kan ze overleven in het speelveld van de vierde ronde: het verwoeste en vervuilde land dat ooit Amerika was en lukt het haar om op tijd de hoofdstad te bereiken? En kan ze de mensen die het dichtst bij haar staan wel écht vertrouwen, of is niets wat het lijkt?",
+    "industryIdentifiers": [
+      {
+        "type": "ISBN_13",
+        "identifier": "9789045205847"
+      },
+      {
+        "type": "ISBN_10",
+        "identifier": "904520584X"
+      }
+    ],
+    "readingModes": {
+      "text": true,
+      "image": true
+    },
+    "printType": "BOOK",
+    "categories": [
+      "Fiction"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "1.2.2.0.preview.3",
+    "panelizationSummary": {
+      "containsEpubBubbles": false,
+      "containsImageBubbles": false
+    },
+    "imageLinks": {
+      "smallThumbnail": "http://books.google.com/books/content?id=_cI_AQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "thumbnail": "http://books.google.com/books/content?id=_cI_AQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "nl",
+    "previewLink": "http://books.google.nl/books?id=_cI_AQAAQBAJ&printsec=frontcover&dq=test&hl=&as_pt=BOOKS&cd=1&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=_cI_AQAAQBAJ&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=_cI_AQAAQBAJ"
+  },
+  "saleInfo": {
+    "country": "NL",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+      "amount": 7.99,
+      "currencyCode": "EUR"
+    },
+    "retailPrice": {
+      "amount": 5.43,
+      "currencyCode": "EUR"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=_cI_AQAAQBAJ&rdid=book-_cI_AQAAQBAJ&rdot=1&source=gbs_api",
+    "offers": [
+      {
+        "finskyOfferType": 1,
+        "listPrice": {
+          "amountInMicros": 7990000,
+          "currencyCode": "EUR"
+        },
+        "retailPrice": {
+          "amountInMicros": 5430000,
+          "currencyCode": "EUR"
+        }
+      }
+    ]
+  },
+  "accessInfo": {
+    "country": "NL",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.nl/books/download/De_test-sample-epub.acsm?id=_cI_AQAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+      "isAvailable": true,
+      "acsTokenLink": "http://books.google.nl/books/download/De_test-sample-pdf.acsm?id=_cI_AQAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://play.google.com/books/reader?id=_cI_AQAAQBAJ&hl=&as_pt=BOOKS&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+  },
+  "searchInfo": {
+    "textSnippet": "De Test is het eerste deel van een nieuwe serie waarop de fans van De Hongerspelen en Inwijding al maanden wachten! `De Test kruipt onder je huid en laat je niet meer los."
+  }
+}
