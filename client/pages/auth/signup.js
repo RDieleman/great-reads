@@ -2,11 +2,12 @@ import {useEffect, useState} from "react";
 import useRequest from "../../hooks/use-request";
 import Router from "next/router";
 import CustomModal from "../../components/modal";
-import {router} from "next/client";
 
 const SignUpComponent = ({currentUser, onServer}) => {
     if (currentUser) {
-        router.push("/dashboard")
+        if (!onServer) {
+            Router.push("/dashboard")
+        }
         return <div>Redirecting...</div>
     }
 

@@ -1,9 +1,8 @@
 import {useEffect, useState} from "react";
-import useRequest from "../../hooks/use-request";
 import Router from "next/router";
 import Script from "next/script";
 import CustomModal from "../../components/modal";
-import {router} from "next/client";
+import useRequest from "../../hooks/use-request";
 
 const SigninComponent = ({currentUser, onServer}) => {
     const [email, setEmail] = useState('');
@@ -76,12 +75,10 @@ const SigninComponent = ({currentUser, onServer}) => {
         }
     }, []);
 
-    if (currentUser && onServer) {
-        return <></>
-    }
-
     if (currentUser) {
-        router.push("/dashboard")
+        if (!onServer) {
+            Router.push("/dashboard")
+        }
         return <div>Redirecting...</div>
     }
 
