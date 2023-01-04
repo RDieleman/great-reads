@@ -2,11 +2,13 @@ import {useEffect, useState} from "react";
 import useRequest from "../../hooks/use-request";
 import Router from "next/router";
 import Script from "next/script";
+import CustomModal from "../../components/modal";
+import {router} from "next/client";
 
-export default () => {
+const SigninComponent = ({currentUser, onServer}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [doRequest, error] = useRequest({
+    const [doAuthCredentials, authCredentialsErrors] = useRequest({
         url: '/api/users/signin/credentials',
         method: 'post',
         body: {
@@ -14,8 +16,16 @@ export default () => {
         },
         onSuccess: () => Router.push('/')
     });
+    const [showCredentialModal, setShowCredentialModal] = useState(false);
+    useEffect(() => {
+        if (authCredentialsErrors == null) {
+            return;
+        }
+        setShowCredentialModal(true);
+    }, [authCredentialsErrors])
+
     const [idToken, setIdToken] = useState('');
-    const [doAuthGoogle, authGoogleError] = useRequest({
+    const [doAuthGoogle, authGoogleErrors] = useRequest({
         url: '/api/users/signin/google',
         method: 'post',
         body: {
@@ -23,6 +33,13 @@ export default () => {
         },
         onSuccess: () => Router.push('/')
     })
+    const [showGoogleModal, setShowGoogleModal] = useState(false);
+    useEffect(() => {
+        if (authGoogleErrors == null) {
+            return;
+        }
+        setShowGoogleModal(true);
+    }, [authGoogleErrors])
 
     useEffect(() => {
         if (idToken) {
@@ -32,11 +49,10 @@ export default () => {
 
     const onSubmit = async (event) => {
         event.preventDefault();
-        await doRequest();
+        await doAuthCredentials();
     }
 
     const handleTokenResponse = async (response) => {
-        console.log(response.credential);
         await setIdToken(response.credential);
     }
 
@@ -47,7 +63,7 @@ export default () => {
         });
         google.accounts.id.renderButton(
             document.getElementById("buttonDiv"),
-            {theme: "outline", size: "large"}  // customization attributes
+            {theme: "outline", size: "large", width: "100%"}  // customization attributes
         );
         google.accounts.id.prompt();
     }
@@ -60,7 +76,16 @@ export default () => {
         }
     }, []);
 
-    return <div>
+    if (currentUser && onServer) {
+        return <></>
+    }
+
+    if (currentUser) {
+        router.push("/dashboard")
+        return <div>Redirecting...</div>
+    }
+
+    return <div className="d-flex w-100 h-100 justify-content-center align-items-center">
         <Script
             src="https://accounts.google.com/gsi/client"
             onLoad={loadButton}
@@ -68,8 +93,7 @@ export default () => {
             defer
         />
         <form onSubmit={onSubmit} className="container">
-            <h1>Sign In2</h1>
-            <div className="mb-3">
+            <div className="mb-2">
                 <label htmlFor="emailInput" className="form-label">Email address</label>
                 <input type="email" className="form-control" id="emailInput" value={email}
                        onChange={e => setEmail(e.target.value)}/>
@@ -79,11 +103,40 @@ export default () => {
                 <input type="password" className="form-control" id="passwordInput" value={password}
                        onChange={e => setPassword(e.target.value)}/>
             </div>
-            {error}
-            <button className="btn btn-primary">Continue</button>
+            <div className="d-grid gap-2">
+                <button className="btn btn-primary" type="submit">Continue</button>
+                <button className="btn btn-outline-secondary" type="button"
+                        onClick={() => Router.push("/auth/signup")}>Sign Up
+                </button>
+            </div>
+            <hr></hr>
+            <div id="buttonDiv"></div>
         </form>
-        <hr></hr>
-        <div id="buttonDiv"></div>
+        <CustomModal
+            show={showCredentialModal}
+            onHide={() => setShowCredentialModal(false)}
+            title="Oops..."
+            body={(
+                <ul>
+                    {authCredentialsErrors && authCredentialsErrors.map((err) => {
+                        return <li>{err.message}</li>
+                    })}
+                </ul>
+            )}
+        />
+        <CustomModal
+            show={showGoogleModal}
+            onHide={() => setShowGoogleModal(false)}
+            title="Oops..."
+            body={(
+                <ul>
+                    {authGoogleErrors && authGoogleErrors.map((err) => {
+                        return <li>{err.message}</li>
+                    })}
+                </ul>
+            )}
+        />
     </div>
-
 }
+
+export default SigninComponent;
