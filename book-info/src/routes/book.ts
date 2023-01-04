@@ -36,8 +36,6 @@ router.get(
     async (req: Request, res: Response) => {
         const {id} = req.query;
 
-        console.log(">>>>>>>>", id);
-
         const result = await BookService.getVolume(id as string);
         res.status(200).send(result);
     });
