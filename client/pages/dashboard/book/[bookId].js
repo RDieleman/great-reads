@@ -1,4 +1,3 @@
-import useRouter from "../../../hooks/use-router";
 import {Dropdown, Image} from "react-bootstrap";
 import {getAuthorNames, getImageUrlFromBook} from "../../../utility/book";
 import Rating from "../../../components/rating";
@@ -6,26 +5,30 @@ import DOMPurify from 'isomorphic-dompurify';
 import {ShelfType} from "../../../components/shelf";
 import useRequest from "../../../hooks/use-request";
 import {useEffect, useRef, useState} from "react";
+import DashboardLayout from "../../../components/layouts/dashboard";
+import axios from "axios";
+import Loader from "../../../components/loader";
+import {useAppContext} from "../../_app";
+import useRouter from "../../../hooks/use-router";
 
 const BookComponent = (props) => {
-    let {currentUser, book, shelf} = props;
+    let {bookId} = props;
 
-    const router = useRouter();
-
-    if (!currentUser) {
-        return router.push("/");
-    }
+    const state = useAppContext();
 
     const firstRender = useRef(true);
+    const secondRender = useRef(true);
 
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
 
-    const [selectedType, setSelectedType] = useState(shelf);
+    const book = useRef();
+
+    const [selectedType, setSelectedType] = useState(null);
     const [moveBook, moveBookErrors] = useRequest({
         url: "/api/shelf",
         method: "post",
         body: {
-            bookId: book.id,
+            bookId,
             shelfType: selectedType?.id
         }
     });
@@ -34,14 +37,49 @@ const BookComponent = (props) => {
         url: "/api/shelf",
         method: "delete",
         body: {
-            bookId: book.id
+            bookId
         }
     });
+
+    useEffect(() => {
+        const fetchBook = async () => {
+            setLoading(true);
+            try {
+                let res = await axios.get("/api/book-info/volume?id=" + bookId);
+
+                if (res.status !== 200) {
+                    return await signOut();
+                }
+
+                book.current = res.data;
+
+                res = await axios.get("/api/shelf");
+                const shelves = res.data;
+
+                let currentType = Object.values(ShelfType).find((type) => {
+                    return shelves[type.id].includes(book.current.id);
+                });
+
+                setSelectedType(currentType);
+            } catch (err) {
+                console.error(err);
+            } finally {
+                setLoading(false);
+            }
+
+        }
+        fetchBook();
+    }, [])
 
     useEffect(() => {
         // Ignore initial render.
         if (firstRender.current) {
             firstRender.current = false;
+            return;
+        }
+
+        if (secondRender.current) {
+            secondRender.current = false;
             return;
         }
 
@@ -63,18 +101,26 @@ const BookComponent = (props) => {
         shelfBook();
     }, [selectedType]);
 
-    return <div className="text-center flex-column d-flex flex-fill overflow-hidden">
+    if (!state.user) {
+        return useRouter().push('/');
+    }
+
+    if (loading) {
+        return <Loader/>;
+    }
+
+    return <>
         <div className="flex-column d-flex flex-fill overflow-auto gap-3">
             <div
                 className="d-flex justify-content-center align-items-center w-100 h-50 pt-4 pb-4 bg-dark bg-opacity-25">
-                <Image className="h-100 w-auto shadow rounded" src={getImageUrlFromBook(book) || "#"}/>
+                <Image className="h-100 w-auto shadow rounded" src={getImageUrlFromBook(book.current) || "#"}/>
             </div>
             <div className="font-monospace container d-flex flex-column justify-content-start align-items-center gap-0">
-                <div className="fw-semibold fs-2">{book.title || "Unknown"}</div>
-                {book.subtitle && <div className="fs-4">{book.subtitle}</div>}
-                <div className="text-muted">by {getAuthorNames(book)}</div>
+                <div className="fw-semibold fs-2">{book.current.title || "Unknown"}</div>
+                {book.current.subtitle && <div className="fs-4">{book.current.subtitle}</div>}
+                <div className="text-muted">by {getAuthorNames(book.current)}</div>
                 <hr className="w-100"/>
-                <Rating book={book}/>
+                <Rating book={book.current}/>
                 <hr className="w-100"/>
                 <Dropdown className="d-flex flex-column align-items-stretch w-100">
                     <Dropdown.Toggle variant="secondary">
@@ -105,37 +151,28 @@ const BookComponent = (props) => {
                 <hr className="w-100"/>
                 <div className="container d-flex flex-column justify-content-start align-items-center gap-2">
                     <div className="fw-semibold fs-2">{"Description"}</div>
-                    {book.description ?
+                    {book.current.description ?
                         <div className="text-center"
-                             dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(book.description)}}/>
+                             dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(book.current.description)}}/>
                         :
                         <div>No description found.</div>}
                 </div>
 
             </div>
         </div>
-    </div>
+    </>
 }
 
 BookComponent.getInitialProps = async (context, client, currentUser) => {
     const {bookId} = context.query;
-    let res = await client.get("/api/book-info/volume?id=" + bookId);
-    const book = res.data;
-
-    res = await client.get("/api/shelf");
-    const shelves = res.data;
-
-    let currentType = Object.values(ShelfType).find((type) => {
-        return shelves[type.id].includes(book.id);
-    });
 
     const props = {
-        showMenu: true,
-        book,
-        shelf: currentType
+        bookId
     }
 
     return props;
 }
+
+BookComponent.PageLayout = DashboardLayout;
 
 export default BookComponent;

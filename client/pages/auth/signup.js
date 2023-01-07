@@ -2,17 +2,14 @@ import {useEffect, useState} from "react";
 import useRequest from "../../hooks/use-request";
 import Router from "next/router";
 import CustomModal from "../../components/modal";
+import AuthLayout from "../../components/layouts/auth";
+import {useAppContext} from "../_app";
+import useRouter from "../../hooks/use-router";
 
 const SignUpComponent = ({currentUser, onServer}) => {
-    if (currentUser) {
-        if (!onServer) {
-            Router.push("/dashboard")
-        }
-        return <div>Redirecting...</div>
-    }
-
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const state = useAppContext();
 
     const [doSignUp, errors] = useRequest({
         url: '/api/users/signup',
@@ -20,7 +17,10 @@ const SignUpComponent = ({currentUser, onServer}) => {
         body: {
             email, password
         },
-        onSuccess: () => Router.push('/')
+        onSuccess: (user) => {
+            state.setUser(user);
+            Router.push('/');
+        }
     });
 
     const [showCredentialModal, setShowCredentialModal] = useState(false);
@@ -36,7 +36,11 @@ const SignUpComponent = ({currentUser, onServer}) => {
         await doSignUp();
     }
 
-    return <div className="d-flex w-100 h-100 justify-content-center align-items-center">
+    if (state.user) {
+        return useRouter().push('/');
+    }
+
+    return <>
         <form onSubmit={onSubmit} className="container">
             <div className="mb-2">
                 <label htmlFor="emailInput" className="form-label">Email address</label>
@@ -67,7 +71,9 @@ const SignUpComponent = ({currentUser, onServer}) => {
                 </ul>
             )}
         />
-    </div>
+    </>
 }
+
+SignUpComponent.PageLayout = AuthLayout;
 
 export default SignUpComponent;

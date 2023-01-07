@@ -14,22 +14,26 @@ import {
 import Router from "next/router";
 import useRequest from "../hooks/use-request";
 import CustomModal from "./modal";
+import {useAppContext} from "../pages/_app";
 
 export default () => {
+    const state = useAppContext();
     const [showMenu, setShowMenu] = useState(false);
-    const [logOut, logOutErrors] = useRequest({
-        url: '/api/users/signout/',
-        method: 'post',
-        onSuccess: () => {
-            Router.push('/');
-        }
-    });
     const [showDeleteModal, setShowDeleteModal] = useState(false);
     const [deleteAccount, deleteAccountErrors] = useRequest({
         url: '/api/users',
         method: 'delete',
         onSuccess: () => {
+            state.setUser(null);
             Router.push('/')
+        }
+    });
+    const [logout, logoutErrors] = useRequest({
+        url: '/api/users/signout',
+        method: 'post',
+        onSuccess: () => {
+            state.setUser(null);
+            Router.push('/');
         }
     })
     const [showPrivacyModal, setShowPrivacyModal] = useState(false);
@@ -39,7 +43,7 @@ export default () => {
             <Navbar className="p-0" key="xxl" bg="dark" expand="xxl">
                 <div className="hstack flex-grow-1" style={{borderRadius: "0", maxHeight: "45px"}}>
                     <Button variant="dark" className="h-100 btn container p-2 flex-grow-1"
-                            onClick={() => Router.push("/")}
+                            onClick={() => Router.push("/dashboard")}
                     >
                         <House className="h-100 w-auto" color="white"/>
                     </Button>
@@ -83,7 +87,7 @@ export default () => {
                                 <label className="flex-grow-1">Privacy</label>
                             </Button>
                             <Button variant="light" className="btn-primary btn p-3 hstack" style={{borderRadius: "0px"}}
-                                    onClick={() => logOut()}
+                                    onClick={() => logout()}
                             >
                                 <BoxArrowDownRight color="black" className="h-100 w-auto"/>
                                 <label className="flex-grow-1">Logout</label>

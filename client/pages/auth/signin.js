@@ -1,21 +1,29 @@
 import {useEffect, useState} from "react";
-import Router from "next/router";
 import Script from "next/script";
 import CustomModal from "../../components/modal";
 import useRequest from "../../hooks/use-request";
+import AuthLayout from "../../components/layouts/auth";
+import Router from "next/router";
+import {useAppContext} from "../_app";
+import useRouter from "../../hooks/use-router";
 
 const SigninComponent = ({currentUser, onServer}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const state = useAppContext();
     const [doAuthCredentials, authCredentialsErrors] = useRequest({
         url: '/api/users/signin/credentials',
         method: 'post',
         body: {
             email, password
         },
-        onSuccess: () => Router.push('/')
+        onSuccess: (user) => {
+            state.setUser(user);
+            Router.push('/');
+        }
     });
     const [showCredentialModal, setShowCredentialModal] = useState(false);
+
     useEffect(() => {
         if (authCredentialsErrors == null) {
             return;
@@ -30,7 +38,10 @@ const SigninComponent = ({currentUser, onServer}) => {
         body: {
             idToken
         },
-        onSuccess: () => Router.push('/')
+        onSuccess: (user) => {
+            state.setUser(user);
+            Router.push('/');
+        }
     })
     const [showGoogleModal, setShowGoogleModal] = useState(false);
     useEffect(() => {
@@ -45,6 +56,10 @@ const SigninComponent = ({currentUser, onServer}) => {
             doAuthGoogle();
         }
     }, [idToken])
+
+    if (state.user) {
+        return useRouter().push('/');
+    }
 
     const onSubmit = async (event) => {
         event.preventDefault();
@@ -75,14 +90,7 @@ const SigninComponent = ({currentUser, onServer}) => {
         }
     }, []);
 
-    if (currentUser) {
-        if (!onServer) {
-            Router.push("/dashboard")
-        }
-        return <div>Redirecting...</div>
-    }
-
-    return <div className="d-flex w-100 h-100 justify-content-center align-items-center">
+    return <>
         <Script
             src="https://accounts.google.com/gsi/client"
             onLoad={loadButton}
@@ -133,7 +141,9 @@ const SigninComponent = ({currentUser, onServer}) => {
                 </ul>
             )}
         />
-    </div>
+    </>
 }
+
+SigninComponent.PageLayout = AuthLayout;
 
 export default SigninComponent;

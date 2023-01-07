@@ -1,20 +1,19 @@
-import useRouter from "../../../hooks/use-router";
 import Router from "next/router";
 import {ShelfType} from "../../../components/shelf";
+import DashboardLayout from "../../../components/layouts/dashboard";
+import {useAppContext} from "../../_app";
+import useRouter from "../../../hooks/use-router";
 
 const ShelvesComponent = (props) => {
-    let {currentUser} = props;
+    const state = useAppContext();
 
-    const router = useRouter();
-
-    if (!currentUser) {
-        return router.push("/");
+    if (!state.user) {
+        return useRouter().push('/');
     }
 
-    return <div
-        className="container justify-content-center align-items-center gap-2 flex-column d-flex flex-column flex-fill overflow-hidden">
+    return <div className="container d-flex flex-column justify-content-center align-items-center w-100 h-100">
         {Object.values(ShelfType).map((type) => {
-            return <button className="btn btn-secondary w-100"
+            return <button className="btn btn-secondary w-100 mb-2"
                            onClick={() => Router.push("/dashboard/shelves/" + type.id)}>
                 {type.value}
             </button>
@@ -27,5 +26,7 @@ ShelvesComponent.getInitialProps = async (context, client, currentUser) => {
         showMenu: true,
     }
 }
+
+ShelvesComponent.PageLayout = DashboardLayout;
 
 export default ShelvesComponent;
