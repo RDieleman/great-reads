@@ -15,7 +15,7 @@ export default (props) => {
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <p>{body}</p>
+                {body}
             </Modal.Body>
             <Modal.Footer>
                 <Button variant="danger" onClick={props.onHide}>Close</Button>
