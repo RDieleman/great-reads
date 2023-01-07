@@ -47,7 +47,10 @@ spec:
                   name: google-secret
                   key: CLIENT_SECRET
             - name: REDIS_URL
-              value: 'redis://redis-srv:6379'
+              valueFrom:
+                secretKeyRef:
+                  name: redis-secret
+                  key: URL
 ---
 apiVersion: v1
 kind: Service
