@@ -1,6 +1,5 @@
 import express from 'express';
-import {TokenRevokedPublisher} from "../events/token_revoked/token-revoked-publisher";
-import {natsWrapper} from "../nats-wrapper";
+import {SessionManager} from "../services/session-manager";
 import {currentUser} from "../middlewares/current-user";
 
 const router = express.Router();
@@ -8,11 +7,8 @@ const router = express.Router();
 router.post('/api/users/signout', currentUser, async (req, res) => {
     req.session = null;
 
-    if (req.currentUser) {
-        await new TokenRevokedPublisher(natsWrapper.client).publish({
-            userId: req.currentUser.userInfo.id,
-            at: 123
-        });
+    if (req.currentUser && req.currentUser.valid) {
+        await SessionManager.invalidate(req.currentUser.userInfo.id);
     }
 
     res.send({});

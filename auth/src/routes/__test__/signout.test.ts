@@ -1,7 +1,6 @@
 import request from 'supertest';
 import {app} from "../../app";
-import {natsWrapper} from "../../nats-wrapper";
-import {Subjects} from "../../events/subjects";
+import {redisWrapper} from "../../redis-wrapper";
 
 it('removes auth cookie after sign out', async () => {
     const signUpDetails = await signup();
@@ -17,7 +16,7 @@ it('removes auth cookie after sign out', async () => {
     );
 });
 
-it('publishes an event on sign out', async () => {
+it('invalidates tokens on sign out', async () => {
     const signUpDetails = await signup();
 
     await request(app)
@@ -26,9 +25,5 @@ it('publishes an event on sign out', async () => {
         .send({})
         .expect(200);
 
-    expect(natsWrapper.client.publish).toHaveBeenCalledWith(
-        Subjects.TOKEN_REVOKED,
-        expect.anything(),
-        expect.anything()
-    );
+    expect(redisWrapper.invalidate).toHaveBeenCalledWith(signUpDetails.userId);
 });
