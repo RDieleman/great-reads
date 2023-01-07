@@ -4,7 +4,8 @@ import {updateIfCurrentPlugin} from "mongoose-update-if-current";
 enum ShelfType {
     WANT_TO_READ = "wantToRead",
     READING = "reading",
-    READ = "read"
+    READ = "read",
+    NONE = "none"
 }
 
 interface ShelfEvent {

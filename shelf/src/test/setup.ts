@@ -2,7 +2,6 @@ import {MongoMemoryServer} from "mongodb-memory-server";
 import {jest} from "@jest/globals";
 import jwt from "jsonwebtoken";
 import mongoose from "mongoose";
-import {User} from "../models/user";
 
 declare global {
     var signin: () => Promise<string[]>;
@@ -48,13 +47,6 @@ global.signin = async () => {
             email: "test@test.com",
         }
     };
-
-    const user = User.build({
-        read: [], reading: [], wantToRead: [],
-        userId: payload.userInfo.id
-    });
-
-    await user.save();
 
     // Create the JWT!
     const token = jwt.sign(payload, process.env.JWT_KEY!);

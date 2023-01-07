@@ -1,6 +1,6 @@
 import request from 'supertest';
 import {app} from "../../app";
-import {ShelfType} from "../../models/user";
+import {ShelfType} from "../../models/shelf";
 
 it('responds unauthorized when retrieving shelfs while not logged in', async () => {
     await request(app)
@@ -16,13 +16,14 @@ it("responds with the user's shelves", async () => {
         .set("Cookie", session)
         .expect(200);
 
-    expect(result.body).toBeDefined();
+    expect(result.body).toHaveProperty("userId");
+    expect(result.body).toHaveProperty("books");
 })
 
 it('responds with updated shelves when moving a book', async () => {
 
     const session = await signin();
-    const result = await request(app)
+    await request(app)
         .post('/api/shelf')
         .set("Cookie", session)
         .send({
@@ -31,10 +32,16 @@ it('responds with updated shelves when moving a book', async () => {
         })
         .expect(200);
 
-    expect(result.body).toHaveProperty("read")
-    expect(result.body.read).toContain("1234");
+    let result = await request(app)
+        .get('/api/shelf')
+        .set("Cookie", session)
+        .expect(200);
 
-    const moveResult = await request(app)
+    expect(result.body).toHaveProperty("books")
+    expect(result.body.books).toHaveProperty("1234");
+    expect(result.body.books["1234"]).toEqual(ShelfType.READ);
+
+    await request(app)
         .post('/api/shelf')
         .set("Cookie", session)
         .send({
@@ -42,8 +49,27 @@ it('responds with updated shelves when moving a book', async () => {
             shelfType: ShelfType.READING
         }).expect(200);
 
-    expect(moveResult.body.read).toEqual([]);
-    expect(moveResult.body.reading).toContain("1234");
+    result = await request(app)
+        .get('/api/shelf')
+        .set("Cookie", session)
+        .expect(200);
+
+    expect(result.body.books["1234"]).toEqual(ShelfType.READING);
+
+    await request(app)
+        .post('/api/shelf')
+        .set("Cookie", session)
+        .send({
+            bookId: "1234",
+            shelfType: ShelfType.NONE
+        }).expect(200);
+
+    result = await request(app)
+        .get('/api/shelf')
+        .set("Cookie", session)
+        .expect(200);
+    
+    expect(result.body.books["1234"]).toBeUndefined();
 });
 
 it('responds bad request when provided data is invalid', async () => {
@@ -62,28 +88,4 @@ it('responds bad request when provided data is invalid', async () => {
             .send(item)
             .expect(400)
     }
-})
-
-it('responds with updated shelves after removing book', async () => {
-    const session = await global.signin();
-
-    let res = await request(app)
-        .post('/api/shelf')
-        .set("Cookie", session)
-        .send({
-            bookId: "1234",
-            shelfType: ShelfType.READING
-        }).expect(200);
-
-    expect(res.body.reading).toContain("1234");
-
-    res = await request(app)
-        .delete('/api/shelf')
-        .set("Cookie", session)
-        .send({
-            bookId: "1234"
-        })
-        .expect(200)
-
-    expect(res.body.reading).toEqual([]);
 })
