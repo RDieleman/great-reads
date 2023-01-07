@@ -1,35 +1,82 @@
-import useRouter from "../../hooks/use-router";
-import buildClient from "../../api/build-client";
 import {ShelfType} from "../../components/shelf";
 import {Image} from "react-bootstrap";
 import {getImageUrlFromBook} from "../../utility/book";
 import Router from "next/router";
 import {formatDateString} from "../../utility/date";
+import DashboardLayout from "../../components/layouts/dashboard";
+import {useEffect, useRef, useState} from "react";
+import axios from "axios";
+import Loader from "../../components/loader";
+import {useAppContext} from "../_app";
+import useRouter from "../../hooks/use-router";
 
 const DashboardComponent = (props) => {
-    let {currentUser, shelfEvents, books} = props;
+    const state = useAppContext();
+    const [isLoading, setIsLoading] = useState(true);
+    const [shelfEvents, setShelfEvents] = useState({});
+    const [pageIndex, setPageIndex] = useState(0);
+    const books = useRef({});
 
-    const router = useRouter();
+    useEffect(() => {
+        const retrieveEvents = async () => {
+            setIsLoading(true);
 
-    if (!currentUser) {
-        return router.push("/");
+            try {
+                const res = await axios.get(`/api/timeline?index=${pageIndex}&items=25`);
+
+                res.data.shelfEvents.forEach((e) => {
+                    books.current[e.bookId] = null;
+                });
+
+                console.log("books: ", books);
+
+                await Promise.all(
+                    Object.keys(books.current).map((bookId) => {
+                        return axios.get("/api/book-info/volume?id=" + bookId).then((res) => {
+                            books.current[bookId] = res.data;
+                        });
+                    })
+                );
+                setShelfEvents((previousEvents) => previousEvents[pageIndex] = res.data.shelfEvents);
+            } catch (err) {
+                console.error(err);
+            } finally {
+                setIsLoading(false);
+            }
+        }
+
+        retrieveEvents();
+    }, [pageIndex]);
+
+
+    if (!state.user) {
+        return useRouter().push('/');
+    }
+
+    if (isLoading) {
+        return <Loader/>
     }
 
     const handleItemClick = (id) => {
         Router.push("/dashboard/book/" + id);
     }
 
-    return <div className="vstack overflow-hidden">
+    let events = [];
+    Object.keys(shelfEvents).forEach((key) => {
+        events = events.concat(shelfEvents[key]);
+    });
+
+    return <>
         <div
             className="pt-2 pb-2 container d-flex h-100 flex-column gap-3 font-monospace overflow-auto justify-content-start align-items-center">
             {
-                shelfEvents.length < 1 ?
+                events.length < 1 ?
                     (<div className="d-flex h-100 justify-content-center align-items-center">
                         <label className="font-monospace">Your timeline is empty.</label>
                     </div>)
                     :
-                    shelfEvents.map((e) => {
-                        const book = books[e.bookId];
+                    events.map((e) => {
+                        const book = books.current[e.bookId];
 
                         let action;
 
@@ -64,32 +111,9 @@ const DashboardComponent = (props) => {
                         )
                     })}
         </div>
-    </div>
+    </>
 }
 
-DashboardComponent.getInitialProps = async (context, c, currentUser) => {
-    // Fetch information about current user.
-    const client = buildClient(context);
-    const {data} = await client.get('/api/timeline?index=0&items=25');
-
-    const books = {}
-    data.shelfEvents.forEach((e) => {
-        books[e.bookId] = null;
-    });
-
-    await Promise.all(
-        Object.keys(books).map((bookId) => {
-            return client.get("/api/book-info/volume?id=" + bookId).then((res) => {
-                books[bookId] = res.data;
-            });
-        })
-    );
-
-    return {
-        showMenu: true,
-        books,
-        ...data
-    }
-}
+DashboardComponent.PageLayout = DashboardLayout;
 
 export default DashboardComponent;

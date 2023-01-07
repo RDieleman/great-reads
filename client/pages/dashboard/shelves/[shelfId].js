@@ -2,21 +2,64 @@ import useRouter from "../../../hooks/use-router";
 import Router from "next/router";
 import {Image} from "react-bootstrap";
 import {getAuthorNames, getImageUrlFromBook} from "../../../utility/book";
+import DashboardLayout from "../../../components/layouts/dashboard";
+import {useEffect, useState} from "react";
+import axios from "axios";
+import Loader from "../../../components/loader";
+import {useAppContext} from "../../_app";
 
 const ShelvesComponent = (props) => {
-    let {currentUser, shelfId, books} = props;
+    let {shelfId} = props;
+    const state = useAppContext();
+
+    const [books, setBooks] = useState({});
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchBooks = async () => {
+            setIsLoading(true);
+            try {
+                let res = await axios.get("/api/shelf");
+
+                const books = {}
+                res.data[shelfId].forEach((bookId) => {
+                    books[bookId] = null;
+                })
+
+                await Promise.all(
+                    Object.keys(books).map((bookId) => {
+                        return axios.get("/api/book-info/volume?id=" + bookId).then((res => {
+                            books[bookId] = res.data;
+                        }))
+                    })
+                );
+
+                setBooks(books);
+            } catch (err) {
+                console.error(err);
+            } finally {
+                setIsLoading(false);
+            }
+        }
+
+        fetchBooks();
+    }, [])
 
     const router = useRouter();
 
-    if (!currentUser) {
-        return router.push("/");
+    if (!state.user) {
+        return useRouter().push('/');
+    }
+
+    if (isLoading) {
+        return <Loader/>
     }
 
     const handleItemClick = (id) => {
         Router.push("/dashboard/book/" + id);
     }
 
-    return <div className="vstack overflow-hidden">
+    return <>
         <div
             className="pt-2 pb-2 container d-flex h-100 flex-column gap-3 font-monospace overflow-auto justify-content-start align-items-center">
             {
@@ -45,7 +88,7 @@ const ShelvesComponent = (props) => {
                         )
                     })}
         </div>
-    </div>
+    </>
 }
 
 ShelvesComponent.getInitialProps = async (context, client, currentUser) => {
@@ -67,10 +110,10 @@ ShelvesComponent.getInitialProps = async (context, client, currentUser) => {
     );
 
     return {
-        showMenu: true,
-        books,
         shelfId
     }
 }
+
+ShelvesComponent.PageLayout = DashboardLayout;
 
 export default ShelvesComponent;

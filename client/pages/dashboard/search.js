@@ -1,67 +1,98 @@
-import useRouter from "../../hooks/use-router";
-import useRequest from "../../hooks/use-request";
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import * as queryString from "querystring";
 import {Image, InputGroup} from "react-bootstrap";
 import {Search} from "react-bootstrap-icons";
 import {getImageUrlFromBook} from "../../utility/book";
+import DashboardLayout from "../../components/layouts/dashboard";
+import Loader from "../../components/loader";
+import axios from "axios";
+import {useAppContext} from "../_app";
+import useRouter from "../../hooks/use-router";
 import Router from "next/router";
 
-const SearchComponent = (props) => {
-    let {currentUser} = props;
-
-    const router = useRouter();
-
-    if (!currentUser) {
-        return router.push("/");
-    }
-    const [items, setItems] = useState([]);
-    const [index, setIndex] = useState(0);
-    const [term, setTerm] = useState('');
+const SearchComponent = () => {
+    const state = useAppContext();
     const [fetching, setFetching] = useState(false);
+    const [error, setError] = useState(null);
+    const listRef = useRef(null);
+
+    useEffect(() => {
+        try {
+            listRef.current.scrollTop = state.searchScrollLocation;
+        } catch (err) {
+            console.error(err);
+        }
+
+    }, []);
+
+
+    useEffect(() => {
+        if (!state.searchTerm) {
+            state.setSearchTerm('');
+            state.setSearchItems({});
+            state.setSearchScrollLocation(0);
+
+            return;
+        }
+        fetchBooks();
+    }, [state.searchIndex]);
+
+    if (!state.user) {
+        return useRouter().push('/');
+    }
 
     const getQueryString = () => {
         const base = "/api/book-info/search";
         const params = {
-            term,
-            pageIndex: index,
+            term: state.searchTerm,
+            pageIndex: state.searchIndex,
             pageItems: 25
         };
 
         return base + "?" + queryString.stringify(params);
     }
 
-    const [doRequest, errors] = useRequest({
-        url: getQueryString(),
-        method: "get",
-        onSuccess: (data) => {
-            setItems(prevState => (prevState.concat(data.results)));
-        }
-    });
+    const fetchBooks = async () => {
+        if (!state.searchTerm) {
+            state.setSearchTerm('');
+            state.setSearchItems({});
+            state.setSearchScrollLocation(0);
+            state.setSearchIndex(0);
 
-    useEffect(() => {
-        async function fetchBooks() {
-            setFetching(true);
-            await doRequest();
+            return;
+        }
+
+        setFetching(true);
+        try {
+            const res = await axios.get(getQueryString());
+            if (res.status !== 200) {
+                setError('Search request failed. Please try again.');
+                return;
+            }
+            state.setSearchItems(prevState => prevState[state.searchIndex] = res.data.results);
+        } finally {
             setFetching(false);
         }
-
-        fetchBooks();
-    }, [index]);
-
-    const handleItemClick = (id) => {
-        Router.push("/dashboard/book/" + id);
     }
 
-    return <div className="flex-column d-flex flex-fill overflow-hidden">
+    const handleItemClick = (id) => {
+        return Router.push("/dashboard/book/" + id);
+    }
+
+    let list = [];
+    Object.values(state.searchItems).forEach((page) => {
+        list = list.concat(page);
+    });
+
+    return <>
         <div className="container d-grid gap-2 mb-3 mt-3">
             <InputGroup>
                 <input
                     type="search"
                     className="form-control"
                     id="searchInput"
-                    value={term}
-                    onChange={(e) => setTerm(e.target.value)}
+                    value={state.searchTerm}
+                    onChange={(e) => state.setSearchTerm(e.target.value)}
                     placeholder="Search..."
                     autoFocus
                 />
@@ -69,9 +100,9 @@ const SearchComponent = (props) => {
                     className="btn btn-primary w-25 h-auto"
                     type="button"
                     onClick={() => {
-                        setIndex(0);
-                        setItems([]);
-                        doRequest();
+                        state.setSearchIndex(0);
+                        state.setSearchItems({});
+                        fetchBooks();
                     }}
                     disabled={fetching}
                 >
@@ -80,13 +111,21 @@ const SearchComponent = (props) => {
             </InputGroup>
         </div>
         <hr className="p-0 m-0"/>
-        <div className="container flex-column d-flex flex-fill overflow-auto gap-3 pt-2 pb-2">
-            {items.length < 1 ?
-                (<div className="d-flex h-100 justify-content-center align-items-center">
-                    <label className="font-monospace">No results.</label>
-                </div>)
+        <div ref={listRef} className="container flex-column d-flex flex-fill overflow-auto gap-3 pt-2 pb-2"
+             onScroll={(e) => {
+                 state.setSearchScrollLocation(e.target.scrollTop);
+             }
+             }>
+            {list.length < 1 ?
+                (fetching ? (
+                        <Loader/>
+                    ) : (
+                        <div className="d-flex h-100 justify-content-center align-items-center">
+                            <label className="font-monospace">No results.</label>
+                        </div>)
+                )
                 :
-                items.map((item) => {
+                list.map((item) => {
                     const imageUrl = getImageUrlFromBook(item) || "#";
 
                     return (<div
@@ -103,48 +142,30 @@ const SearchComponent = (props) => {
                                 <strong className="text-break">{item.title || "Unknown"}</strong>
                                 {item.subtitle && <label className="fw-lighter">{item.subtitle}</label>}
                                 <hr className="p-0 m-0"/>
-                                {item.authors && <label className="opacity-75">{item.authors.join(", ")}</label>}
+                                {item.authors &&
+                                    <label className="opacity-75">{item.authors.join(", ")}</label>}
                             </div>
                         </div>
 
                     </div>)
                 })
             }
-
-            {items.length > 0 && (<button
+            {(list.length > 0 && fetching) ? (
+                <Loader/>
+            ) : null}
+            {list.length > 0 && (<button
                 className="btn btn-secondary"
                 onClick={async () => {
-                    setIndex((index) => index + 1);
+                    state.setSearchIndex((index) => index + 1);
                 }}
                 disabled={fetching}
             >
                 Load More
             </button>)}
-
-
-            {/*{items.map((item) => {*/}
-            {/*    const imageUrl = getImageUrl(item);*/}
-
-            {/*    return (*/}
-            {/*        <Card>*/}
-            {/*            {imageUrl && <Card.Img variant="top" src={imageUrl}/>}*/}
-            {/*            <Card.Body>*/}
-            {/*                <Card.Title>{item.title || "Unknown"}</Card.Title>*/}
-            {/*                {item.subtitle && <Card.Subtitle>{item.subtitle}</Card.Subtitle>}*/}
-            {/*                {item.description && <Card.Text>{item.description}</Card.Text>}*/}
-            {/*            </Card.Body>*/}
-            {/*            {item.authors && <Card.Footer>{item.authors.join(', ')}</Card.Footer>}*/}
-            {/*        </Card>*/}
-            {/*    )*/}
-            {/*})}*/}
         </div>
-    </div>
+    </>
 }
 
-SearchComponent.getInitialProps = async (context, c, currentUser) => {
-    return {
-        showMenu: true,
-    }
-}
+SearchComponent.PageLayout = DashboardLayout;
 
 export default SearchComponent;

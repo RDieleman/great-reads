@@ -1,51 +1,81 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import buildClient from "../api/build-client";
-import Header from "../components/header";
-import React, {useEffect} from "react";
+import {createContext, useContext, useEffect, useState} from "react";
 import "../style.css";
-import Menu from "../components/menu";
 
-const AppComponent = ({Component, pageProps, currentUser}) => {
+
+export const AppContext = createContext();
+
+const AppWrapper = ({children}) => {
+    const [user, setUser] = useState(null);
+    const [searchIndex, setSearchIndex] = useState(0);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [searchItems, setSearchItems] = useState({});
+    const [searchScrollLocation, setSearchScrollLocation] = useState(0);
+
+    let state = {
+        user,
+        setUser,
+        searchTerm,
+        setSearchTerm,
+        searchIndex,
+        setSearchIndex,
+        searchItems,
+        setSearchItems,
+        searchScrollLocation,
+        setSearchScrollLocation
+    }
+
+    return (
+        <AppContext.Provider value={state}>
+            {children}
+        </AppContext.Provider>
+    );
+}
+
+export const useAppContext = () => {
+    return useContext(AppContext);
+}
+
+const AppComponent = ({Component, pageProps}) => {
     // Load Bootstrap
     useEffect(() => {
         import("bootstrap/dist/js/bootstrap");
     }, []);
 
-    return <div className="flex-column d-flex vh-100">
-        <Header currentUser={currentUser}/>
-        <Component {...{currentUser, ...pageProps}} />
-        {pageProps.showMenu && <Menu/>}
-    </div>
+    return (
+        <AppWrapper>
+            <div className="flex-column d-flex vh-100">
+                {Component.PageLayout ? (
+                    <Component.PageLayout>
+                        <Component {...pageProps} />
+                    </Component.PageLayout>
+                ) : (
+                    <Component {...pageProps} />
+                )}
+            </div>
+        </AppWrapper>
+    )
 };
 
 AppComponent.getInitialProps = async (context) => {
     // Create API client.
     const client = buildClient(context.ctx);
 
-    // Fetch information about current user.
-    const {data} = await client.get('/api/users/me');
-
-    let defaultPropValues = {
-        showMenu: false
-    }
-
     let pageProps = {};
 
     if (context.Component.getInitialProps) {
         pageProps = await context.Component.getInitialProps(
             context.ctx,
-            client,
-            data.currentUser,
+            client
         );
     }
 
     // Continue to App Component.
     return {
         pageProps: {
-            ...defaultPropValues,
             ...pageProps
-        },
-        ...data
+        }
     };
 };
 
