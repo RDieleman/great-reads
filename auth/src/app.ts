@@ -27,9 +27,11 @@ const limiter = rateLimit({
 app.use(limiter);
 
 app.use(json());
+const inTestEnvironment = process.env.NODE_ENV === 'test';
 app.use(cookieSession({
-    signed: true,
-    secure: true,
+    // Don't sign and secure cookie in test environment.
+    signed: !inTestEnvironment,
+    secure: !inTestEnvironment,
     httpOnly: true,
     sameSite: true,
     keys: [
