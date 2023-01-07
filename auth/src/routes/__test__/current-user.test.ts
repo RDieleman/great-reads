@@ -20,5 +20,5 @@ it('responds without details when user is not authenticated', async () => {
         .send()
         .expect(401);
 
-    expect(res.body.currentUser).toEqual(null);
+    expect(res.body.currentUser).toEqual(undefined);
 });
