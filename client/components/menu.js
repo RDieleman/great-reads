@@ -1,6 +1,6 @@
 import {Button, Modal, Nav, Navbar} from "react-bootstrap";
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {
     Bookmarks,
     BoxArrowDownRight,
@@ -15,6 +15,7 @@ import Router from "next/router";
 import useRequest from "../hooks/use-request";
 import CustomModal from "./modal";
 import {useAppContext} from "../pages/_app";
+import axios from "axios";
 
 export default () => {
     const state = useAppContext();
@@ -37,6 +38,34 @@ export default () => {
         }
     })
     const [showPrivacyModal, setShowPrivacyModal] = useState(false);
+    const [privacyReport, setPrivacyReport] = useState({});
+
+    useEffect(() => {
+        const retrievePrivacyReport = async () => {
+            const urls = [
+                '/api/users/privacy',
+                '/api/book-info/privacy',
+                '/api/shelf/privacy',
+                '/api/timeline/privacy'
+            ];
+
+            const responses = await Promise.all(urls.map((url) => {
+                return axios.get(url);
+            }));
+
+            let report = {};
+
+            responses.forEach((res) => {
+                report = {
+                    ...report,
+                    ...res.data
+                };
+            });
+
+            setPrivacyReport(report);
+        }
+        retrievePrivacyReport();
+    }, [])
 
     return (
         <>
@@ -112,7 +141,11 @@ export default () => {
                 body={<div>
                     <p>You personal data is processed for the following purposes</p>
                     <ul>
-                        <li><strong>Email:</strong> Identifying the user when signing up and authenticating.</li>
+                        {
+                            Object.entries(privacyReport).map((entry, i) => {
+                                return <li key={entry[0] + i}><strong>{entry[0]}:</strong> {entry[1]}</li>
+                            })
+                        }
                     </ul>
                 </div>
                 }

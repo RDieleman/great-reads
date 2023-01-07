@@ -33,14 +33,6 @@ const BookComponent = (props) => {
         }
     });
 
-    const [deleteBook, deleteBookErrors] = useRequest({
-        url: "/api/shelf",
-        method: "delete",
-        body: {
-            bookId
-        }
-    });
-
     useEffect(() => {
         const fetchBook = async () => {
             setLoading(true);
@@ -56,8 +48,10 @@ const BookComponent = (props) => {
                 res = await axios.get("/api/shelf");
                 const shelves = res.data;
 
-                let currentType = Object.values(ShelfType).find((type) => {
-                    return shelves[type.id].includes(book.current.id);
+                let shelvedBook = shelves.books[book.current.id];
+
+                let currentType = (!shelvedBook) ? ShelfType.none : Object.values(ShelfType).find((type) => {
+                    return shelvedBook === type.id;
                 });
 
                 setSelectedType(currentType);
@@ -86,11 +80,7 @@ const BookComponent = (props) => {
         async function shelfBook() {
             try {
                 setLoading(true);
-                if (selectedType) {
-                    await moveBook();
-                } else {
-                    await deleteBook();
-                }
+                await moveBook();
             } catch (ex) {
                 console.error(ex);
             } finally {
@@ -140,12 +130,6 @@ const BookComponent = (props) => {
                                 )
                             })
                         }
-                        <Dropdown.Item
-                            active={!selectedType}
-                            onClick={() => setSelectedType(undefined)}
-                        >
-                            None
-                        </Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
                 <hr className="w-100"/>

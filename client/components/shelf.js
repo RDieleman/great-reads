@@ -10,5 +10,9 @@ export const ShelfType = {
     read: {
         id: "read",
         value: "Finished"
+    },
+    none: {
+        id: "none",
+        value: "None"
     }
 }

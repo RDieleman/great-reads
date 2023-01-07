@@ -90,6 +90,8 @@ const DashboardComponent = (props) => {
                             case ShelfType.wantToRead.id:
                                 action = <span><strong>{book.title}</strong> was added to your wishlist.</span>
                                 break;
+                            default:
+                                return null;
                         }
 
                         return (

@@ -14,13 +14,13 @@ const months = [
 ]
 
 const days = [
+    "Sun",
     "Mon",
     "Tue",
     "Wed",
     "Thur",
     "Fri",
-    "Sat",
-    "Sun"
+    "Sat"
 ]
 
 

@@ -24,8 +24,10 @@ app.use(limiter);
 
 app.use(json());
 app.set('query parser', 'simple');
+
 app.use(cookieSession({
-    signed: false,
+    // Only sign cookies when not in a testing environment.
+    signed: process.env.NODE_ENV !== 'test',
     secure: true,
     httpOnly: true,
     sameSite: true,
