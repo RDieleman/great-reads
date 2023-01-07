@@ -13,6 +13,7 @@ interface UserInfo {
 interface Token {
     userInfo: UserInfo;
     iat: number;
+    valid: boolean;
 }
 
 class SessionManager {
@@ -30,6 +31,7 @@ class SessionManager {
     }
 
     static async invalidate(userId: string): Promise<void> {
+        console.log("invalidate called", userId);
         await this.stateStore.invalidate(userId);
     }
 
@@ -37,10 +39,8 @@ class SessionManager {
         try {
             // Decode the token.
             const token = jwt.verify(session.jwt, process.env.JWT_KEY!) as Token;
-            const wasInvalidated = await this.stateStore.wasInvalidated(token);
-            if (wasInvalidated) {
-                return null;
-            }
+            console.log("token: ", token);
+            token.valid = !(await this.stateStore.wasInvalidated(token));
 
             return token;
         } catch (err) {

@@ -9,6 +9,7 @@ declare global {
 }
 
 jest.mock("../nats-wrapper");
+jest.mock("../redis-wrapper");
 
 let mongo: any;
 

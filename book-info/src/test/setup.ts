@@ -19,6 +19,7 @@ const sendRequestMock = async (path: string, params: Record<string, string | num
 }
 
 jest.mock("../nats-wrapper");
+jest.mock("../redis-wrapper");
 jest.spyOn(BookService, 'sendRequest').mockImplementation(sendRequestMock);
 
 beforeAll(async () => {

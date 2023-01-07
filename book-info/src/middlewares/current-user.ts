@@ -19,7 +19,7 @@ export const currentUser = async (
     }
 
     try {
-        const token = SessionManager.getToken(req.session as Session);
+        const token = await SessionManager.getToken(req.session as Session);
         if (token != null) {
             req.currentUser = token;
         }
