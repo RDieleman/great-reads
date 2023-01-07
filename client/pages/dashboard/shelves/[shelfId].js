@@ -21,15 +21,15 @@ const ShelvesComponent = (props) => {
             try {
                 let res = await axios.get("/api/shelf");
 
-                const books = {}
-                res.data[shelfId].forEach((bookId) => {
-                    books[bookId] = null;
-                })
+                const books = {};
+                const entries = Object.entries(res.data.books).filter((entry) => {
+                    return entry[1] === shelfId
+                });
 
                 await Promise.all(
-                    Object.keys(books).map((bookId) => {
-                        return axios.get("/api/book-info/volume?id=" + bookId).then((res => {
-                            books[bookId] = res.data;
+                    entries.map((entry) => {
+                        return axios.get("/api/book-info/volume?id=" + entry[0]).then((res => {
+                            books[entry[0]] = res.data;
                         }))
                     })
                 );
@@ -93,21 +93,6 @@ const ShelvesComponent = (props) => {
 
 ShelvesComponent.getInitialProps = async (context, client, currentUser) => {
     const {shelfId} = context.query;
-    let res = await client.get("/api/shelf");
-    const shelves = res.data;
-
-    const books = {}
-    res.data[shelfId].forEach((bookId) => {
-        books[bookId] = null;
-    })
-
-    await Promise.all(
-        Object.keys(books).map((bookId) => {
-            return client.get("/api/book-info/volume?id=" + bookId).then((res => {
-                books[bookId] = res.data;
-            }))
-        })
-    );
 
     return {
         shelfId
