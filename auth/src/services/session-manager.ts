@@ -25,7 +25,10 @@ class SessionManager {
                 {
                     userInfo
                 },
-                process.env.JWT_KEY!
+                process.env.JWT_KEY!,
+                {
+                    expiresIn: "30d",
+                }
             )
         };
     }
