@@ -18,6 +18,7 @@ declare global {
 
 jest.mock("../nats-wrapper");
 jest.mock("../redis-wrapper");
+jest.mock('../../common-passwords.json', () => (['common_password', 'common_password2']));
 
 let mongo: any;
 

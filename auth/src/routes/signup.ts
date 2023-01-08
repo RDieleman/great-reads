@@ -7,6 +7,8 @@ import {SessionManager} from "../services/session-manager";
 import {AccountCreatedPublisher} from "../events/account_created/account-created-publisher";
 import {natsWrapper} from "../nats-wrapper";
 
+const commonPasswordList = require('../../common-passwords.json');
+
 const router = express.Router();
 
 router.post(
@@ -23,6 +25,12 @@ router.post(
     validateRequest,
     async (req: Request, res: Response) => {
         const {email, password} = req.body;
+
+        // // Verify password security;
+        const isBadPassword = commonPasswordList.includes(password);
+        if (isBadPassword) {
+            throw new BadRequestError("Bad password.");
+        }
 
         // Verify is email is not already in use.
         const existingUser = await User.findOne({email});

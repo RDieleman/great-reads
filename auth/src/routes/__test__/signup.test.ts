@@ -31,6 +31,18 @@ it('returns a 400 with an invalid password signup', async () => {
         .expect(400);
 });
 
+it('denies signup when using a commonly used password', async () => {
+    const result = await request(app)
+        .post('/api/users/signup')
+        .send({
+            email: 'test@test.com',
+            password: 'common_password'
+        })
+        .expect(400)
+
+    expect(result.body.errors).toEqual([{"message": "Bad password."}]);
+})
+
 it('returns a 400 with a missing email or password signup', async () => {
     await request(app)
         .post('/api/users/signup')
