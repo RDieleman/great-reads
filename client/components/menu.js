@@ -6,6 +6,7 @@ import {
     BoxArrowDownRight,
     House,
     List,
+    PersonCircle,
     Search,
     ShieldExclamation,
     XCircleFill,
@@ -30,9 +31,15 @@ export default () => {
         }
     });
     const [logout, logoutErrors] = useRequest({
-        url: '/api/users/signout',
+        url: '/api/users/public/signout',
         method: 'post',
         onSuccess: () => {
+            // Clear caches
+            caches.keys().then((names) => {
+                names.forEach((name) => {
+                    caches.delete(name);
+                });
+            });
             state.setUser(null);
             Router.push('/');
         }
@@ -43,10 +50,10 @@ export default () => {
     useEffect(() => {
         const retrievePrivacyReport = async () => {
             const urls = [
-                '/api/users/privacy',
-                '/api/book-info/privacy',
-                '/api/shelf/privacy',
-                '/api/timeline/privacy'
+                '/api/users/public/privacy',
+                '/api/book-info/public/privacy',
+                '/api/shelf/public/privacy',
+                '/api/timeline/public/privacy'
             ];
 
             const responses = await Promise.all(urls.map((url) => {
@@ -108,6 +115,15 @@ export default () => {
                             >
                                 <XCircleFill color="black" className="h-100 w-auto"/>
                                 <label className="flex-grow-1">Delete Account</label>
+                            </Button>
+                            <Button variant="light" className="btn-primary btn p-3 hstack" style={{borderRadius: "0px"}}
+                                    onClick={() => {
+                                        Router.push('/dashboard/account');
+                                        setShowMenu(false);
+                                    }}
+                            >
+                                <PersonCircle color="black" className="h-100 w-auto"/>
+                                <label className="flex-grow-1">Account</label>
                             </Button>
                             <Button variant="light" className="btn-primary btn p-3 hstack" style={{borderRadius: "0px"}}
                                     onClick={() => setShowPrivacyModal(true)}

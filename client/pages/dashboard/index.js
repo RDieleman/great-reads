@@ -28,8 +28,6 @@ const DashboardComponent = (props) => {
                     books.current[e.bookId] = null;
                 });
 
-                console.log("books: ", books);
-
                 await Promise.all(
                     Object.keys(books.current).map((bookId) => {
                         return axios.get("/api/book-info/volume?id=" + bookId).then((res) => {

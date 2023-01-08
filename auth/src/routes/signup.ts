@@ -7,22 +7,29 @@ import {SessionManager} from "../services/session-manager";
 import {AccountCreatedPublisher} from "../events/account_created/account-created-publisher";
 import {natsWrapper} from "../nats-wrapper";
 
+const commonPasswordList = require('../../common-passwords.json');
+
 const router = express.Router();
 
 router.post(
-    '/api/users/signup',
+    '/api/users/public/signup',
     [
         body('email')
             .isEmail()
             .withMessage('Email must be valid.'),
         body('password')
-            .trim()
-            .isLength({min: 4, max: 20})
-            .withMessage('Password must be between 4 and 20 characters.')
+            .isLength({min: 12, max: 64})
+            .withMessage('Password must be between 12 and 64 characters.'),
     ],
     validateRequest,
     async (req: Request, res: Response) => {
         const {email, password} = req.body;
+
+        // // Verify password security;
+        const isBadPassword = commonPasswordList.includes(password);
+        if (isBadPassword) {
+            throw new BadRequestError("Bad password.");
+        }
 
         // Verify is email is not already in use.
         const existingUser = await User.findOne({email});
@@ -38,14 +45,18 @@ router.post(
         new AccountCreatedPublisher(natsWrapper.client).publish({
             userId: user.id
         });
-        
-        // Generate session
-        req.session = SessionManager.generate({
-            id: user.id,
-            email: user.email
-        });
 
-        res.status(201).send(user);
+        try {
+            // Generate session
+            req.session = SessionManager.generate({
+                id: user.id,
+                email: user.email
+            });
+        } catch (ex) {
+            console.error('Failed to create session.');
+        }
+
+        res.status(201).send();
     });
 
 export {router as signupRouter};

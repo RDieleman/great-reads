@@ -6,7 +6,7 @@ it('removes auth cookie after sign out', async () => {
     const signUpDetails = await signup();
 
     const result = await request(app)
-        .post('/api/users/signout')
+        .post('/api/users/public/signout')
         .set('Cookie', signUpDetails.cookie)
         .send({})
         .expect(200);
@@ -20,7 +20,7 @@ it('invalidates tokens on sign out', async () => {
     const signUpDetails = await signup();
 
     await request(app)
-        .post('/api/users/signout')
+        .post('/api/users/public/signout')
         .set('Cookie', signUpDetails.cookie)
         .send({})
         .expect(200);

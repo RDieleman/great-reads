@@ -22,12 +22,6 @@ class RedisWrapper implements TokenStateStore {
             return false;
         }
 
-        console.log("Entry: ", entry);
-
-        console.log("Comparing", token.iat);
-        console.log("And ", parseInt(entry));
-        console.log("result", token.iat < parseInt(entry));
-
         // See if token was issued before invalidation.
         return token.iat < parseInt(entry);
     }

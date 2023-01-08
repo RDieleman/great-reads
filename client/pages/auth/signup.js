@@ -1,18 +1,20 @@
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import useRequest from "../../hooks/use-request";
 import Router from "next/router";
 import CustomModal from "../../components/modal";
 import AuthLayout from "../../components/layouts/auth";
 import {useAppContext} from "../_app";
 import useRouter from "../../hooks/use-router";
+import Password from "../../components/input/password";
 
 const SignUpComponent = ({currentUser, onServer}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const strength = useRef('');
     const state = useAppContext();
 
     const [doSignUp, errors] = useRequest({
-        url: '/api/users/signup',
+        url: '/api/users/public/signup',
         method: 'post',
         body: {
             email, password
@@ -48,9 +50,10 @@ const SignUpComponent = ({currentUser, onServer}) => {
                        onChange={e => setEmail(e.target.value)}/>
             </div>
             <div className="mb-3">
-                <label htmlFor="passwordInput" className="form-label">Password</label>
-                <input type="password" className="form-control" id="passwordInput" value={password}
-                       onChange={e => setPassword(e.target.value)}/>
+                <label htmlFor="passwordInput"
+                       className="form-label">Password {password.length > 0 && strength.current}</label>
+                <Password password={password} setPassword={setPassword}
+                          setStrengthElement={(e) => strength.current = e}/>
             </div>
             <div className="d-grid gap-2">
                 <button className="btn btn-primary" type="submit">Continue</button>

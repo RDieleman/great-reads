@@ -1,6 +1,4 @@
 import express, {Request, Response} from 'express';
-import {currentUser} from "../middlewares/current-user";
-import {requireAuth} from "../middlewares/require-auth";
 import {body} from "express-validator";
 import {validateRequest} from "../middlewares/validate-request";
 import {BookShelvedPublisher} from "../events/book_shelved/book-shelved-publisher";
@@ -12,8 +10,6 @@ const router = express.Router();
 
 router.get(
     '/api/shelf/',
-    currentUser,
-    requireAuth,
     async (req: Request, res: Response) => {
         const {id} = req.currentUser!.userInfo
 
@@ -47,8 +43,6 @@ router.get(
 
 router.post(
     '/api/shelf/',
-    currentUser,
-    requireAuth,
     [
         body('bookId')
             .isString()
@@ -62,10 +56,6 @@ router.post(
         const userId = req.currentUser!.userInfo.id;
         const {bookId, shelfType} = req.body;
 
-        console.log("Move", bookId);
-        console.log("To", shelfType);
-        console.log("for user: ", userId);
-        
         const move = await ShelfMove.build({
             bookId,
             userId,

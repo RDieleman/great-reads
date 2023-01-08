@@ -8,11 +8,15 @@ import {NotFoundError} from "./errors/not-found-error";
 import {errorHandler} from "./middlewares/error-handler";
 import rateLimit from "express-rate-limit";
 import {timelineRouter} from "./routes/timeline";
+import {requireAuth} from "./middlewares/require-auth";
+import helmet from "helmet";
 
 const app = express();
 
 // trust nginx proxy
 app.set('trust proxy', true);
+
+app.use(helmet());
 
 // Set rate limiter
 const limiter = rateLimit({
@@ -23,16 +27,20 @@ const limiter = rateLimit({
 app.use(limiter);
 
 app.use(json());
+const inTestEnvironment = process.env.NODE_ENV === 'test';
 app.use(cookieSession({
-    // Only sign cookies when not in a testing environment.
-    signed: process.env.NODE_ENV !== 'test',
-    secure: true,
+    // Don't sign and secure cookie in test environment.
+    name: (inTestEnvironment) ? "session" : "__Host-session",
+    signed: !inTestEnvironment,
+    secure: !inTestEnvironment,
     httpOnly: true,
     sameSite: true,
     keys: [
         process.env.COOKIE_KEY!
     ]
 }));
+
+app.use(requireAuth);
 
 app.use(privacyRouter);
 app.use(timelineRouter);

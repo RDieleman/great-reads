@@ -4,7 +4,7 @@ import request from 'supertest';
 it('responds with object of personal data usage by service', async () => {
     // Request report.
     const result = await request(app)
-        .get('/api/book-info/privacy')
+        .get('/api/book-info/public/privacy')
         .expect(200);
 
     // Verify result

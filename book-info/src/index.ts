@@ -42,7 +42,7 @@ const start = async () => {
         // Start listeners
         new TokenRevokedListener(natsWrapper.client).listen();
     } catch (err) {
-        console.log(err);
+        console.error(err);
     }
 
     // Start API.

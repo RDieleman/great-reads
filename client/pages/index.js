@@ -14,7 +14,6 @@ const LandingPage = () => {
         const retrieveUser = async () => {
             try {
                 let res = await axios.get('/api/users/me');
-                console.log('response: ', res);
                 if (res.status === 200) {
                     user.current = res.data.currentUser;
                 }
@@ -32,7 +31,6 @@ const LandingPage = () => {
         return <Loader/>
     }
 
-    console.log("current user: ", user.current);
     state.setUser(user.current);
 
     const path = (!user.current) ? "/auth/signin" : "/dashboard";
