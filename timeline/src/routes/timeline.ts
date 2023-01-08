@@ -1,6 +1,4 @@
 import express, {Request, Response} from 'express';
-import {currentUser} from "../middlewares/current-user";
-import {requireAuth} from "../middlewares/require-auth";
 import {query} from "express-validator";
 import {validateRequest} from "../middlewares/validate-request";
 import {Timeline} from "../models/Timeline";
@@ -9,8 +7,6 @@ const router = express.Router();
 
 router.get(
     '/api/timeline',
-    currentUser,
-    requireAuth,
     query("index").isInt({min: 0}),
     query("items").isInt({min: 1, max: 40}),
     validateRequest,

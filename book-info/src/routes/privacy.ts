@@ -5,7 +5,7 @@ const usageReport = require("../../personal-data-usage.json");
 const router = express.Router();
 
 router.get(
-    '/api/book-info/privacy',
+    '/api/book-info/public/privacy',
     async (req: Request, res: Response) => {
         res.status(200).send(usageReport);
     });

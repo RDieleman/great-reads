@@ -1,13 +1,12 @@
 import express from 'express';
 import {SessionManager} from "../services/session-manager";
-import {currentUser} from "../middlewares/current-user";
 
 const router = express.Router();
 
-router.post('/api/users/signout', currentUser, async (req, res) => {
+router.post('/api/users/public/signout', async (req, res) => {
     req.session = null;
 
-    if (req.currentUser && req.currentUser.valid) {
+    if (req.currentUser) {
         await SessionManager.invalidate(req.currentUser.userInfo.id);
     }
 

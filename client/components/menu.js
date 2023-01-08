@@ -30,7 +30,7 @@ export default () => {
         }
     });
     const [logout, logoutErrors] = useRequest({
-        url: '/api/users/signout',
+        url: '/api/users/public/signout',
         method: 'post',
         onSuccess: () => {
             state.setUser(null);
@@ -43,10 +43,10 @@ export default () => {
     useEffect(() => {
         const retrievePrivacyReport = async () => {
             const urls = [
-                '/api/users/privacy',
-                '/api/book-info/privacy',
-                '/api/shelf/privacy',
-                '/api/timeline/privacy'
+                '/api/users/public/privacy',
+                '/api/book-info/public/privacy',
+                '/api/shelf/public/privacy',
+                '/api/timeline/public/privacy'
             ];
 
             const responses = await Promise.all(urls.map((url) => {

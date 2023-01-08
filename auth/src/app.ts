@@ -12,6 +12,7 @@ import {privacyRouter} from "./routes/privacy";
 import {NotFoundError} from "./errors/not-found-error";
 import {errorHandler} from "./middlewares/error-handler";
 import rateLimit from "express-rate-limit";
+import {requireAuth} from "./middlewares/require-auth";
 
 const app = express();
 
@@ -39,6 +40,9 @@ app.use(cookieSession({
         process.env.COOKIE_KEY!
     ]
 }));
+
+// Always require authentication, unless in public endpoint.
+app.use(requireAuth);
 
 app.use(currentUserRouter);
 app.use(signinRouter);

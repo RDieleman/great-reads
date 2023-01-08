@@ -12,7 +12,7 @@ const SigninComponent = ({currentUser, onServer}) => {
     const [password, setPassword] = useState('');
     const state = useAppContext();
     const [doAuthCredentials, authCredentialsErrors] = useRequest({
-        url: '/api/users/signin/credentials',
+        url: '/api/users/public/signin/credentials',
         method: 'post',
         body: {
             email, password
@@ -33,7 +33,7 @@ const SigninComponent = ({currentUser, onServer}) => {
 
     const [idToken, setIdToken] = useState('');
     const [doAuthGoogle, authGoogleErrors] = useRequest({
-        url: '/api/users/signin/google',
+        url: '/api/users/public/signin/google',
         method: 'post',
         body: {
             idToken

@@ -8,6 +8,7 @@ import {NotFoundError} from "./errors/not-found-error";
 import {errorHandler} from "./middlewares/error-handler";
 import rateLimit from "express-rate-limit";
 import {shelfRouter} from "./routes/shelf";
+import {requireAuth} from "./middlewares/require-auth";
 
 const app = express();
 
@@ -35,6 +36,8 @@ app.use(cookieSession({
         process.env.COOKIE_KEY!
     ]
 }));
+
+app.use(requireAuth);
 
 app.use(privacyRouter);
 app.use(shelfRouter);

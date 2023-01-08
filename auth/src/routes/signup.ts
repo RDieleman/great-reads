@@ -12,7 +12,7 @@ const commonPasswordList = require('../../common-passwords.json');
 const router = express.Router();
 
 router.post(
-    '/api/users/signup',
+    '/api/users/public/signup',
     [
         body('email')
             .isEmail()

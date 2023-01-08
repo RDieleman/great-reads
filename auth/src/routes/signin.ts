@@ -13,7 +13,7 @@ import {natsWrapper} from "../nats-wrapper";
 const router = express.Router();
 
 router.post(
-    '/api/users/signin/credentials',
+    '/api/users/public/signin/credentials',
     [
         body('email')
             .isEmail()
@@ -59,7 +59,7 @@ router.post(
     });
 
 router.post(
-    '/api/users/signin/google', [
+    '/api/users/public/signin/google', [
         body('idToken')
     ],
     validateRequest,

@@ -8,6 +8,7 @@ import {NotFoundError} from "./errors/not-found-error";
 import {errorHandler} from "./middlewares/error-handler";
 import {privacyRouter} from "./routes/privacy";
 import {bookRouter} from "./routes/book";
+import {requireAuth} from "./middlewares/require-auth";
 
 const app = express();
 
@@ -37,6 +38,8 @@ app.use(cookieSession({
         process.env.COOKIE_KEY!
     ]
 }));
+
+app.use(requireAuth);
 
 app.use(privacyRouter);
 app.use(bookRouter);

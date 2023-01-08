@@ -12,7 +12,7 @@ const SignUpComponent = ({currentUser, onServer}) => {
     const state = useAppContext();
 
     const [doSignUp, errors] = useRequest({
-        url: '/api/users/signup',
+        url: '/api/users/public/signup',
         method: 'post',
         body: {
             email, password
