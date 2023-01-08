@@ -38,14 +38,18 @@ router.post(
         new AccountCreatedPublisher(natsWrapper.client).publish({
             userId: user.id
         });
-        
-        // Generate session
-        req.session = SessionManager.generate({
-            id: user.id,
-            email: user.email
-        });
 
-        res.status(201).send(user);
+        try {
+            // Generate session
+            req.session = SessionManager.generate({
+                id: user.id,
+                email: user.email
+            });
+        } catch (ex) {
+            console.log(ex);
+        }
+
+        res.status(201).send();
     });
 
 export {router as signupRouter};
