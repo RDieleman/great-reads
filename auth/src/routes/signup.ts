@@ -18,7 +18,6 @@ router.post(
             .isEmail()
             .withMessage('Email must be valid.'),
         body('password')
-            .trim()
             .isLength({min: 12, max: 64})
             .withMessage('Password must be between 12 and 64 characters.'),
     ],
