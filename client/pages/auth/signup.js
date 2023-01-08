@@ -5,6 +5,7 @@ import CustomModal from "../../components/modal";
 import AuthLayout from "../../components/layouts/auth";
 import {useAppContext} from "../_app";
 import useRouter from "../../hooks/use-router";
+import Password from "../../components/input/password";
 
 const SignUpComponent = ({currentUser, onServer}) => {
     const [email, setEmail] = useState('');
@@ -49,8 +50,7 @@ const SignUpComponent = ({currentUser, onServer}) => {
             </div>
             <div className="mb-3">
                 <label htmlFor="passwordInput" className="form-label">Password</label>
-                <input type="password" className="form-control" id="passwordInput" value={password}
-                       onChange={e => setPassword(e.target.value)}/>
+                <Password password={password} setPassword={setPassword}/>
             </div>
             <div className="d-grid gap-2">
                 <button className="btn btn-primary" type="submit">Continue</button>
