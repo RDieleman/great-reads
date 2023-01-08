@@ -33,25 +33,30 @@ router.post(
 
         const {email, password} = req.body;
 
-        // Verify user exists.
-        const user = await User.findOne({email: email});
-        if (!user) {
-            throw new BadRequestError("Invalid credentials.");
+        try {
+            // Verify user exists.
+            const user = await User.findOne({email: email});
+            if (!user) {
+                throw new Error('User not found.');
+            }
+
+            // Verify password.
+            const passwordsMatch = await PasswordManager.compare(user.password, password);
+            if (!passwordsMatch) {
+                throw new Error('Invalid Password.');
+            }
+
+            // Generate session.
+            req.session = SessionManager.generate({
+                id: user.id,
+                email: user.email
+            });
+        } catch (ex) {
+            console.log('ex');
+            throw new BadRequestError('Invalid credentials');
         }
 
-        // Verify password.
-        const passwordsMatch = await PasswordManager.compare(user.password, password);
-        if (!passwordsMatch) {
-            throw new BadRequestError("Invalid credentials.");
-        }
-
-        // Generate session.
-        req.session = SessionManager.generate({
-            id: user.id,
-            email: user.email
-        });
-
-        res.status(200).send(user);
+        res.status(200).send();
     });
 
 router.post(
@@ -61,38 +66,44 @@ router.post(
     validateRequest,
     async (req: Request, res: Response) => {
         // Validate token
-        const googleAccount = await GoogleService.getUserInfo(req.body.idToken);
-        if (!googleAccount || !googleAccount.id || !googleAccount.email) {
+        try {
+            const googleAccount = await GoogleService.getUserInfo(req.body.idToken);
+            if (!googleAccount || !googleAccount.id || !googleAccount.email) {
+                throw new Error('Invalid Google Token');
+            }
+
+            // Find user connected to google account.
+            let user = await User.findOne({"email": googleAccount.email});
+
+            // Create if it doesn't exist.
+            if (!user) {
+                // @ts-ignore
+                user = await User.build({"email": googleAccount!.email});
+
+                // @ts-ignore
+                await user.save();
+
+                new AccountCreatedPublisher(natsWrapper.client).publish({
+                    userId: user!.id
+                })
+            }
+
+            if (!user) {
+                throw new Error('User not found.');
+            }
+
+            // Generate session for user.
+            req.session = SessionManager.generate({
+                id: user.id,
+                email: user.email
+            });
+
+        } catch (ex) {
+            console.log(ex);
             throw new BadRequestError("Invalid credentials.");
         }
 
-        // Find user connected to google account.
-        let user = await User.findOne({"email": googleAccount.email});
-
-        // Create if it doesn't exist.
-        if (!user) {
-            // @ts-ignore
-            user = await User.build({"email": googleAccount!.email});
-
-            // @ts-ignore
-            await user.save();
-
-            new AccountCreatedPublisher(natsWrapper.client).publish({
-                userId: user!.id
-            })
-        }
-
-        if (!user) {
-            throw new BadRequestError("Invalid credentials.")
-        }
-
-        // Generate session for user.
-        req.session = SessionManager.generate({
-            id: user.id,
-            email: user.email
-        });
-
-        res.status(200).send(user);
+        res.status(200).send();
     });
 
 export {router as signinRouter};
