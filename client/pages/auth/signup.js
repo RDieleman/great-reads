@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import useRequest from "../../hooks/use-request";
 import Router from "next/router";
 import CustomModal from "../../components/modal";
@@ -10,6 +10,7 @@ import Password from "../../components/input/password";
 const SignUpComponent = ({currentUser, onServer}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const strength = useRef('');
     const state = useAppContext();
 
     const [doSignUp, errors] = useRequest({
@@ -49,8 +50,10 @@ const SignUpComponent = ({currentUser, onServer}) => {
                        onChange={e => setEmail(e.target.value)}/>
             </div>
             <div className="mb-3">
-                <label htmlFor="passwordInput" className="form-label">Password</label>
-                <Password password={password} setPassword={setPassword}/>
+                <label htmlFor="passwordInput"
+                       className="form-label">Password {password.length > 0 && strength.current}</label>
+                <Password password={password} setPassword={setPassword}
+                          setStrengthElement={(e) => strength.current = e}/>
             </div>
             <div className="d-grid gap-2">
                 <button className="btn btn-primary" type="submit">Continue</button>
