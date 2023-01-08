@@ -53,7 +53,7 @@ router.post(
             });
         } catch (ex) {
             console.log('ex');
-            throw new BadRequestError('Invalid credentials');
+            throw new BadRequestError('Invalid credentials.');
         }
 
         res.status(200).send();

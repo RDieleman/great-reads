@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import {app} from "../app";
 import request from "supertest";
 import {jest} from "@jest/globals";
+import {User} from "../models/user";
 
 interface SignupDetails {
     userId: string,
@@ -52,7 +53,7 @@ afterAll(async () => {
 
 global.signup = async () => {
     const email = 'test@test.com';
-    const password = 'password';
+    const password = 'password12345';
 
     const response = await request(app)
         .post('/api/users/signup')
@@ -61,8 +62,10 @@ global.signup = async () => {
         })
         .expect(201)
 
+    const user = await User.findOne();
+
     return {
-        userId: response.body.id,
+        userId: user!.id,
         email,
         password,
         cookie: response.get('Set-Cookie')

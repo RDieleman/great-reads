@@ -6,7 +6,7 @@ it('returns a 201 on successful signup', async () => {
         .post('/api/users/signup')
         .send({
             email: 'test@test.com',
-            password: 'password'
+            password: 'password12345'
         })
         .expect(201);
 });
@@ -16,7 +16,7 @@ it('returns a 400 with an invalid email', async () => {
         .post('/api/users/signup')
         .send({
             email: 'testtest.com',
-            password: 'password'
+            password: 'password12345'
         })
         .expect(400);
 });
@@ -26,7 +26,7 @@ it('returns a 400 with an invalid password signup', async () => {
         .post('/api/users/signup')
         .send({
             email: 'test@test.com',
-            password: 'pas'
+            password: 'password'
         })
         .expect(400);
 });
@@ -42,7 +42,7 @@ it('returns a 400 with a missing email or password signup', async () => {
     await request(app)
         .post('/api/users/signup')
         .send({
-            password: 'password'
+            password: 'password12345'
         })
         .expect(400);
 });
@@ -64,7 +64,7 @@ it('sets auth cookie after successful signup', async () => {
         .post('/api/users/signup')
         .send({
             email: 'test@test.com',
-            password: 'password'
+            password: 'password12345'
         })
         .expect(201);
 
