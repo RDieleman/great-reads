@@ -29,7 +29,7 @@ class SessionManager {
 
             return token;
         } catch (err) {
-            console.log(err);
+            console.error('Failed to get user from session.');
             return null;
         }
     }

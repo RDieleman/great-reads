@@ -33,7 +33,7 @@ const start = async () => {
         await mongoose.connect(process.env.MONGO_URI);
         console.log('Connected to MongoDB');
     } catch (err) {
-        console.log(err);
+        console.error(err);
     }
 
     // Connect to NATS
@@ -56,7 +56,7 @@ const start = async () => {
         new TokenRevokedListener(natsWrapper.client).listen();
         new AccountDeletedListener(natsWrapper.client).listen();
     } catch (err) {
-        console.log(err);
+        console.error(err);
     }
 
     // Start API.

@@ -56,10 +56,6 @@ router.post(
         const userId = req.currentUser!.userInfo.id;
         const {bookId, shelfType} = req.body;
 
-        console.log("Move", bookId);
-        console.log("To", shelfType);
-        console.log("for user: ", userId);
-
         const move = await ShelfMove.build({
             bookId,
             userId,

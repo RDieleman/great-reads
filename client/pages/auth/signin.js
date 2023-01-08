@@ -86,7 +86,7 @@ const SigninComponent = ({currentUser, onServer}) => {
         try {
             loadButton()
         } catch (err) {
-            console.log("Google not yet defined.");
+            console.log("Google is not defined yet.");
         }
     }, []);
 

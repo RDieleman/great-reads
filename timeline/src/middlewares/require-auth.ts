@@ -24,7 +24,7 @@ export const requireAuth = async (req: Request, res: Response, next: NextFunctio
                 currentUser = token;
             }
         } catch (ex) {
-            console.error(ex);
+            console.error('Failed to get user from session.');
         }
     }
 

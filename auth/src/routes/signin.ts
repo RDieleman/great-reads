@@ -51,7 +51,6 @@ router.post(
                 email: user.email
             });
         } catch (ex) {
-            console.log('ex');
             throw new BadRequestError('Invalid credentials.');
         }
 
@@ -98,7 +97,6 @@ router.post(
             });
 
         } catch (ex) {
-            console.log(ex);
             throw new BadRequestError("Invalid credentials.");
         }
 

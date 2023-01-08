@@ -53,7 +53,7 @@ router.post(
                 email: user.email
             });
         } catch (ex) {
-            console.log(ex);
+            console.error('Failed to create session.');
         }
 
         res.status(201).send();

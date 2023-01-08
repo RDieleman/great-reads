@@ -12,7 +12,7 @@ export class GoogleService {
             idToken: token,
             audience: process.env.CLIENT_ID,
         }).catch((err) => {
-            console.error(err);
+            console.error('Failed to verify Google token', token);
             return null;
         });
 
