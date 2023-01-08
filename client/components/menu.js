@@ -33,6 +33,12 @@ export default () => {
         url: '/api/users/public/signout',
         method: 'post',
         onSuccess: () => {
+            // Clear caches
+            caches.keys().then((names) => {
+                names.forEach((name) => {
+                    caches.delete(name);
+                });
+            });
             state.setUser(null);
             Router.push('/');
         }
