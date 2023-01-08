@@ -9,11 +9,14 @@ import {errorHandler} from "./middlewares/error-handler";
 import {privacyRouter} from "./routes/privacy";
 import {bookRouter} from "./routes/book";
 import {requireAuth} from "./middlewares/require-auth";
+import helmet from "helmet";
 
 const app = express();
 
 // trust nginx proxy
 app.set('trust proxy', true);
+
+app.use(helmet());
 
 // Set rate limiter
 const limiter = rateLimit({

@@ -9,11 +9,14 @@ import {errorHandler} from "./middlewares/error-handler";
 import rateLimit from "express-rate-limit";
 import {timelineRouter} from "./routes/timeline";
 import {requireAuth} from "./middlewares/require-auth";
+import helmet from "helmet";
 
 const app = express();
 
 // trust nginx proxy
 app.set('trust proxy', true);
+
+app.use(helmet());
 
 // Set rate limiter
 const limiter = rateLimit({
