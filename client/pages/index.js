@@ -14,7 +14,6 @@ const LandingPage = () => {
         const retrieveUser = async () => {
             try {
                 let res = await axios.get('/api/users/me');
-                console.log('Current user:: ', res);
                 if (res.status === 200) {
                     user.current = res.data.currentUser;
                 }
