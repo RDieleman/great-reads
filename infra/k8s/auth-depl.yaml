@@ -15,6 +15,9 @@ spec:
       containers:
         - name: auth
           image: rdieleman/auth
+          resources:
+            requests:
+              cpu: 100m
           env:
             - name: NATS_CLIENT_ID
               valueFrom:
@@ -64,3 +67,22 @@ spec:
       protocol: TCP
       port: 3000
       targetPort: 3000
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: auth-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: auth-depl
+  minReplicas: 2
+  maxReplicas: 20
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 80
