@@ -50,16 +50,16 @@ it('denies when password longer than 128 characters', async () => {
 
 it('allows passwords with unicode, spaces, and emojis', async () => {
     const passwords = [
-        'test_h pass😅🥹?',
-        'test_h pass©§'
+        ["test1@example.com", 'test_h pass😅🥹?'],
+        ["test2@example.com", 'test_h pass©§']
     ]
 
     for (const password of passwords) {
         await request(app)
             .post('/api/users/public/signup')
             .send({
-                email: 'test@test.com',
-                password: password
+                email: password[0],
+                password: password[1]
             }).expect(201);
     }
 })
