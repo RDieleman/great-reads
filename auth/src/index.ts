@@ -40,6 +40,8 @@ const start = async () => {
         console.error(err);
     }
 
+    console.log('test test test');
+
     // Connect to NATS
     try {
         await natsWrapper.connect(
