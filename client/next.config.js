@@ -57,7 +57,7 @@ const withPWA = require('next-pwa')({
 
             return pathname.startsWith('/api/');
         },
-        handler: 'NetworkFirst',
+        handler: 'StaleWhileRevalidate',
         method: 'GET',
         options: {
             cacheName: 'generic-backend',
