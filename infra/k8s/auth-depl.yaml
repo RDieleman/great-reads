@@ -17,7 +17,8 @@ spec:
           image: rdieleman/auth
           resources:
             requests:
-              cpu: 50m
+              cpu: 100m
+              memory: 150Mi
           env:
             - name: NATS_CLIENT_ID
               valueFrom:

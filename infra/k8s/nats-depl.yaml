@@ -18,6 +18,7 @@ spec:
           resources:
             requests:
               cpu: 50m
+              memory: 100Mi
           args: [
             '-p', '4222',
             '-m', '8222',

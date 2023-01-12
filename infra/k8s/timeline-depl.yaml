@@ -17,7 +17,8 @@ spec:
           image: rdieleman/timeline
           resources:
             requests:
-              cpu: 50m
+              cpu: 100m
+              memory: 200Mi
           env:
             - name: NATS_CLIENT_ID
               valueFrom:
