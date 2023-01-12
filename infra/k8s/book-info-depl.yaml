@@ -17,7 +17,7 @@ spec:
           image: rdieleman/book-info
           resources:
             requests:
-              cpu: 50m
+              cpu: 100m
           env:
             - name: NATS_CLIENT_ID
               valueFrom:
