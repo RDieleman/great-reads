@@ -17,7 +17,7 @@ spec:
           image: nats-streaming:0.17.0
           resources:
             requests:
-              cpu: 100m
+              cpu: 50m
           args: [
             '-p', '4222',
             '-m', '8222',

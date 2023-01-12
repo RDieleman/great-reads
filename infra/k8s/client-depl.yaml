@@ -17,7 +17,7 @@ spec:
           image: rdieleman/client
           resources:
             requests:
-              cpu: 100m
+              cpu: 50m
 ---
 apiVersion: v1
 kind: Service
