@@ -15,6 +15,9 @@ spec:
       containers:
         - name: nats
           image: nats-streaming:0.17.0
+          resources:
+            requests:
+              cpu: 100m
           args: [
             '-p', '4222',
             '-m', '8222',
